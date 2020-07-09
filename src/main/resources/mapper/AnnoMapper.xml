@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="stu.xuronghao.ledger.mapper.AnnoMapper">
+    <resultMap id="annoQuery" type="stu.xuronghao.ledger.entity.Anno">
+        <result column="annoNO" property="annoNo"/>
+        <result column="annoTitle" property="annoTitle"/>
+        <result column="annoType" property="annoType"/>
+        <result column="annoContent" property="annoContent"/>
+        <result column="annoDate" property="annoDate"/>
+        <result column="adminNo" property="adminNo"/>
+    </resultMap>
+
+    <!--精确查找-->
+    <select id="queryByAnnoNo" resultMap="annoQuery">
+        select *
+        from Announce_T
+        where AnnoNo = #{annoNo}
+    </select>
+
+    <!--模糊查找-->
+    <select id="queryByAnnoTitle" resultMap="annoQuery">
+        select *
+        from Announce_T
+        where annoTitle like concat('%', '${annoTitle}', '%')
+        order by annoDate DESC
+    </select>
+
+    <!--类型查找-->
+    <select id="queryByAnnoType" resultMap="annoQuery">
+        select *
+        from Announce_T
+        where annoType = #{annoType}
+        order by annoDate DESC
+    </select>
+
+    <!--管理员查找-->
+    <select id="queryByAnnoAdmin" resultMap="annoQuery">
+        select *
+        from Announce_T
+        where adminNo = #{adminNo}
+        order by annoDate DESC
+    </select>
+
+    <!--时间段查找-->
+    <select id="queryByAnnoDate" resultMap="annoQuery">
+        select * from Announce_T where
+        <if test="beginDate != null">
+            AND Announce_T.annoDate <![CDATA[>=]]> #{beginDate}
+        </if>
+        <if test="endDate != null">
+            AND Announce_T.annoDate <![CDATA[<=]]> #{endDate}
+        </if>
+        order by annoDate DESC
+    </select>
+
+    <!--整表查找-->
+    <select id="queryAllAnno" resultMap="annoQuery">
+        select *
+        from Announce_T
+        where annoType = 1
+        order by annoDate DESC
+    </select>
+
+    <!--插入新公告-->
+    <insert id="insertAnno" parameterType="stu.xuronghao.ledger.entity.Anno">
+        insert into Announce_T(annoNo, annoTitle, annoType, annoContent, annoDate, adminNo)
+        VALUES (#{annoNo}, #{annoTitle}, #{annoType}, #{annoContent}, #{annoDate}, #{adminNo})
+    </insert>
+
+    <!--更新公告-->
+    <update id="updateAnno" parameterType="stu.xuronghao.ledger.entity.Anno">
+        update Announce_T
+        set annoTitle   = #{annoTitle},
+            annoType    = #{annoType},
+            annoContent = #{annoContent},
+            annoDate    = #{annoDate},
+            adminNo     = #{adminNo}
+        where annoNo = #{annoNo}
+    </update>
+
+    <!--删除公告-->
+    <delete id="deleteAnno" parameterType="stu.xuronghao.ledger.entity.Anno">
+        delete
+        from Announce_T
+        where annoNo = #{annoNo}
+    </delete>
+
+</mapper>

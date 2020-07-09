@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Announce</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!--    <script src="myJs.js"/>-->
+</head>
+<body>
+<div class="container-fluid" >
+    <div th:replace="index::my-header"/>
+    <hr>
+    <div class="row">
+        <div th:replace="index::block"/>
+        <div th:replace="index::my-menu(2)"/>
+        <div th:replace="index::my-left"/>
+        <div class="col-7" style="padding-left: 50px">
+            <div class="row ">
+
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <h1>
+                            <small>公告管理</small>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <br/>
+                <div class="row">
+                    <div class="col-md-8 column">
+                        <a class="btn btn-info" href="javascript:void(0)" data-toggle="modal" data-target="#postAnnounce">发布公告</a>
+                    </div>
+                    <div class="col-4">
+                        <form id = "query_user" method="POST" action = "/admin/announce">
+                            <div class="input-group" style="margin-right: 0">
+                                <span class="input-group-addon" id="basic-addon1"></span>
+                                <input type="text" class="form-control" placeholder="请输入要查询的公告内容" aria-describedby="basic-addon1" name = "key">
+                                <button class="btn btn-default" type="submit" style="background-color: gainsboro">点击查询</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            <br/>
+            <div class="row clearfix">
+                <div class="col-12 column text-center">
+                    <table class="table table-hover table-striped">
+                        <thead>
+                        <tr>
+                            <th>编号</th>
+                            <th>标题</th>
+<!--                            <th>类型</th>-->
+                            <th>内容</th>
+                            <th>日期</th>
+                            <th>管理员</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="announce : ${list}">
+                            <td th:text = "${announce['annoNo']}">annoNo</td>
+                            <td th:text = "${announce['annoTitle']}">annoTitle</td>
+<!--                            <td th:text = "${announce['annoType']}">annoType</td>-->
+                            <td th:text = "${announce['annoContent']}">annoContent</td>
+                            <td th:text = "${announce['annoDate']}">annoDate</td>
+                            <td th:text = "${announce['adminNo']}">adminNo</td>
+                            <td th:if = "${announce['annoType']} == 1" style="border: none"><button class="btn btn-default revocation_announce" th:id = "${announce['annoNo']}" style="background-color: gainsboro" >撤销</button></td>
+                            <td th:if = "${announce['annoType']} == 0" style="border: none"><button class="btn btn-default revocation_announce"  th:id = "${announce['annoNo']}" style="background-color: gainsboro" disabled = "disabled">已撤销</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <div th:replace="index::my-right"/>
+    </div>
+</div>
+<div th:replace="index::#UpdatePassword"/>
+
+<div class="modal fade" id="postAnnounce" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document" >
+        <div class="modal-content" style="margin-top:20%;">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel" >发布公告</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+            </div>
+            <div class="modal-body">
+                <form id="admin_update" method="post" action="/admin/postAnnounce">
+                    <div class="form-group">
+                        <label  class="control-label" name = "content">标题：</label>
+                        <input type="text" name="title" aria-label="With textarea" class="form-control" id="title" >
+                    </div>
+<!--                    <div class="form-group">-->
+<!--                        <label  class="control-label" name = "content">类型：</label>-->
+<!--                        <input type="text" name="type" aria-label="With textarea" class="form-control" id="type" >-->
+<!--                    </div>-->
+                    <div class="form-group">
+                        <label  class="control-label" >内容：</label>
+                        <div class="input-group">
+                            <textarea class="form-control" aria-label="With textarea" id="AnnContent" style="height: 200px" name = "content"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消发布</button>
+                        <button type="submit" class="submit_post_announce btn btn-danger">确认发布</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src = "/js/myJs.js"></script>
+<script >
+    // 撤销公告
+    $(".revocation_announce").click(function () {
+        var id = $(this).attr('id');
+        var str = $(this).text();
+        // alert(str);
+        // alert(id)
+        $.ajax({
+            "async" : false,
+            "url" : "/admin/revocationAnnounce",
+            "type" : "POST",
+            "data" : {"id":id},
+            "success":function () {
+                toastr.success("成功撤销公告");
+                location.reload();
+            }
+        });
+        //alert("ok");
+    })
+
+</script>

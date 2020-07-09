@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="stu.xuronghao.ledger.mapper.ProductMapper">
+    <resultMap id="proQuery" type="stu.xuronghao.ledger.entity.Product">
+        <result column="proNo" property="proNo"/>
+        <result column="proName" property="proName"/>
+        <result column="proNumber" property="proNumber"/>
+        <result column="proType" property="ptoType"/>
+        <result column="proPrice" property="proPrice"/>
+        <result column="proDiscount" property="proDiscount"/>
+        <result column="proStatus" property="proStatus"/>
+        <result column="adminNo" property="adminNo"/>
+    </resultMap>
+
+    <!--精确查找-->
+    <select id="queryByProNo" resultMap="proQuery">
+        select *
+        from Products_T
+        where proNo = #{proNo}
+    </select>
+
+    <!--按名模糊查找-->
+    <select id="queryByProName" resultMap="proQuery">
+        select *
+        from Products_T
+        where proName like concat('%', '${proName}', '%')
+        order by proName
+    </select>
+
+    <!--按类型查找-->
+    <select id="queryByType" resultMap="proQuery">
+        select *
+        from Products_T
+        where proType = #{proType}
+        order by proName
+    </select>
+
+    <!--查找所有-->
+    <select id="queryAllPro" resultMap="proQuery">
+        select *
+        from Products_T
+        order by proName
+    </select>
+
+    <!--新增商品-->
+    <insert id="insertPro" parameterType="stu.xuronghao.ledger.entity.Product">
+        insert into Products_T(proNo, proName, proNumber, proType, proPrice, proDiscount, proStatus, adminNo)
+        values (#{proNo}, #{proName}, #{proNumber}, #{proType}, #{proPrice}, #{proDiscount}, #{proStatus}, #{adminNo})
+    </insert>
+
+    <!--上架商品-->
+    <update id="OnShelf" parameterType="stu.xuronghao.ledger.entity.Product">
+        update Products_T
+        set proStatus = 1
+        where proNo = #{proNo}
+    </update>
+
+    <!--下架商品-->
+    <update id="OffShelf" parameterType="stu.xuronghao.ledger.entity.Product">
+        update Products_T
+        set proStatus = -1
+        where proNo = #{proNo}
+    </update>
+
+</mapper>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="stu.xuronghao.ledger.mapper.StorageMapper">
+    <resultMap id="stockQuery" type="stu.xuronghao.ledger.entity.Storage">
+        <result column="userNo" property="userNo"/>
+        <result column="proNo" property="proNo"/>
+        <result column="purDate" property="purDate"/>
+    </resultMap>
+
+    <!--精确查找-->
+    <select id="queryOneItem" resultMap="stockQuery">
+        select *
+        from Storage_T
+        where userNo = #{userNo}
+          and proNo = #{proNo}
+    </select>
+
+    <!--按物品查找-->
+    <select id="queryByItem" resultMap="stockQuery">
+        select *
+        from Storage_T
+        where proNo = #{proNo}
+        order by userNo
+    </select>
+
+    <!--按用户查找-->
+    <select id="queryByUser" resultMap="stockQuery">
+        select *
+        from Storage_T
+        where userNo = #{userNo}
+        order by proNo
+    </select>
+
+    <!--查找所有-->
+    <select id="queryStock" resultMap="stockQuery">
+        select *
+        from Storage_T
+        order by purDate
+    </select>
+
+    <!--购买物品-->
+    <select id="insertItem" parameterType="stu.xuronghao.ledger.entity.Storage">
+        insert into Storage_T(userNo, proNo, purDate)
+        values (#{userNo}, #{proNo}, #{purDate})
+    </select>
+
+</mapper>

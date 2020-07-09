@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="stu.xuronghao.ledger.mapper.FeedbackMapper">
+    <resultMap id="fbQuery" type="stu.xuronghao.ledger.entity.Feedback">
+        <result column="fbNo" property="fbNo"/>
+        <result column="fbTitle" property="fbTitle"/>
+        <result column="fbType" property="fbType"/>
+        <result column="fbContent" property="fbContent"/>
+        <result column="fbRead" property="fbRead"/>
+        <result column="fbDate" property="fbDate"/>
+        <result column="userNo" property="userNo"/>
+    </resultMap>
+
+    <!--精确查找-->
+    <select id="queryByNo" resultMap="fbQuery">
+        select *
+        from Feedback_T
+        where fbNo = #{fbNo}
+    </select>
+
+    <!--模糊查找-->
+    <select id="queryByTitle" resultMap="fbQuery">
+        select *
+        from Feedback_T
+        where fbTitle like concat('%', '${fbTitle}', '%')
+        order by fbDate DESC
+    </select>
+
+    <!--类型查找-->
+    <select id="queryByType" resultMap="fbQuery">
+        select *
+        from Feedback_T
+        where fbType = #{fbType}
+        order by fbDate DESC
+    </select>
+
+    <!--管理员查找-->
+    <select id="queryByAdmin" resultMap="fbQuery">
+        select *
+        from Feedback_T
+        where adminNo = #{adminNo}
+        order by fbDate DESC
+    </select>
+
+    <!--用户查找-->
+    <select id="queryByUser" resultMap="fbQuery">
+        select *
+        from Feedback_T
+        where userNo = #{userNo}
+        order by fbDate DESC
+    </select>
+
+    <!--时间段查找-->
+    <select id="queryByDate" resultMap="fbQuery">
+        select * from Feedback_T where
+        <if test="beginDate != null">
+            AND Feedback_T.fbDate <![CDATA[>=]]> #{beginDate}
+        </if>
+        <if test="endDate != null">
+            AND Feedback_T.fbDate <![CDATA[<=]]> #{endDate}
+        </if>
+    </select>
+
+    <!--按用户时间段查找-->
+    <select id="queryByDateOfUser" resultMap="fbQuery">
+        select * from Feedback_T where userNo = #{userNo}
+        <if test="beginDate != null">
+            AND Feedback_T.fbDate <![CDATA[>=]]> #{beginDate}
+        </if>
+        <if test="endDate != null">
+            AND Feedback_T.fbDate <![CDATA[<=]]> #{endDate}
+        </if>
+    </select>
+
+    <!--整表查找-->
+    <select id="queryAllFb" resultMap="fbQuery">
+        select *
+        from Feedback_T
+        order by fbTitle, fbDate DESC
+    </select>
+
+    <!--插入新反馈-->
+    <insert id="insertFb" parameterType="stu.xuronghao.ledger.entity.Feedback">
+        insert into Feedback_T(fbTitle, fbType, fbContent, fbRead, fbDate, userNo)
+        VALUES (#{fbTitle}, #{fbType}, #{fbContent},#{fbRead} ,#{fbDate},#{userNo})
+    </insert>
+
+    <!--删除反馈-->
+    <delete id="deleteFb" parameterType="stu.xuronghao.ledger.entity.Feedback">
+        delete
+        from Feedback_T
+        where fbNo = #{fbNo}
+    </delete>
+
+
+</mapper>

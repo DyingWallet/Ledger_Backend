@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="stu.xuronghao.ledger.mapper.CostMapper">
+    <resultMap id="costQuery" type="stu.xuronghao.ledger.entity.Cost">
+        <result column="costNo" property="costNo"/>
+        <result column="costEvent" property="costEvent"/>
+        <result column="costType" property="costType"/>
+        <result column="costAmount" property="costAmount"/>
+        <result column="costRemark" property="costRemark"/>
+        <result column="costDatetime" property="costDate"/>
+        <result column="userNo" property="userNo"/>
+    </resultMap>
+
+    <!--精确查找-->
+    <select id="queryByCostNo" resultMap="costQuery">
+        select *
+        from Cost_T
+        where costNo = #{costNo}
+        order by costDatetime DESC
+    </select>
+
+    <!--模糊查找-->
+    <select id="queryByCostEvent" resultMap="costQuery">
+        select *
+        from Cost_T
+        where costEvent like concat('%', '${costEvent}', '%')
+        order by costDatetime DESC
+    </select>
+
+    <!--类型查找-->
+    <select id="queryByCostType" resultMap="costQuery">
+        select *
+        from Cost_T
+        where costType = #{costType}
+        order by costDatetime DESC
+    </select>
+
+    <!--按用户查找-->
+    <select id="queryByCostUser" resultMap="costQuery">
+        select *
+        from Cost_T
+        where userNo = #{userNo}
+        order by costDatetime DESC
+    </select>
+
+    <!--时间段查找-->
+    <select id="queryByCostDate" resultMap="costQuery">
+        select * from cost_t where
+        <if test="beginDate != null">
+            AND Cost_T.costDatetime <![CDATA[>=]]> #{beginDate}
+        </if>
+        <if test="endDate != null">
+            AND Cost_T.costDatetime <![CDATA[<=]]> #{endDate}
+        </if>
+    </select>
+
+    <!--时间段用户查找-->
+    <select id="queryByCostDateOfUser" resultMap="costQuery">
+        select * from Cost_T where userNo = #{userNo}
+        <if test="beginDate != null">
+            AND Cost_T.costDatetime <![CDATA[>=]]> #{beginDate}
+        </if>
+        <if test="endDate != null">
+            AND Cost_T.costDatetime <![CDATA[<=]]> #{endDate}
+        </if>
+    </select>
+
+    <!--全部查找-->
+    <select id="queryAllCost" resultMap="costQuery">
+        select *
+        from Cost_T
+        order by UserNo, costDatetime DESC
+    </select>
+
+    <!--插入-->
+    <insert id="insertCost" parameterType="stu.xuronghao.ledger.entity.Cost">
+        insert into Cost_T(costNo, costEvent, costType, costAmount, costRemark, costDatetime, userNo)
+        values (#{costNo}, #{costEvent}, #{costType}, #{costAmount}, #{costRemark}, #{costDate}, #{userNo})
+    </insert>
+
+    <!--更新-->
+    <update id="updateCost" parameterType="stu.xuronghao.ledger.entity.Cost">
+        update Cost_T
+        set costEvent  = #{costEvent},
+            costAmount = #{costAmount},
+            costRemark = #{costRemark}
+        where costNo = #{costNo}
+    </update>
+
+    <!--删除-->
+    <delete id="deleteCost" parameterType="stu.xuronghao.ledger.entity.Cost">
+        delete
+        from Cost_T
+        where costNo = #{costNo}
+    </delete>
+</mapper>

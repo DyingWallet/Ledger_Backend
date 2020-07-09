@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="stu.xuronghao.ledger.mapper.IncomeMapper">
+    <resultMap id="incQuery" type="stu.xuronghao.ledger.entity.Income">
+        <result column="incNo" property="incNo"/>
+        <result column="incEvent" property="incEvent"/>
+        <result column="incType" property="incType"/>
+        <result column="incAmount" property="incAmount"/>
+        <result column="incRemark" property="incRemark"/>
+        <result column="incDatetime" property="incDate"/>
+        <result column="userNo" property="userNo"/>
+    </resultMap>
+
+    <!--精确查找-->
+    <select id="queryByIncNo" resultMap="incQuery">
+        select *
+        from Income_T
+        where incNo = #{incNo}
+    </select>
+
+    <!--模糊查找-->
+    <select id="queryByIncEvent" resultMap="incQuery">
+        select *
+        from Income_T
+        where incEvent like concat('%', '${incEvent}', '%')
+        order by incDatetime DESC
+    </select>
+
+    <!--类型查找-->
+    <select id="queryByIncType" resultMap="incQuery">
+        select *
+        from Income_T
+        where incType = #{incType}
+        order by incDatetime DESC
+    </select>
+
+    <!--按用户查找-->
+    <select id="queryByIncUser" resultMap="incQuery">
+        select *
+        from Income_T
+        where userNo = #{userNo}
+        order by incDatetime DESC
+    </select>
+
+    <!--时间段查找-->
+    <select id="queryByIncDate" resultMap="incQuery">
+        select * from Income_T where
+        <if test="beginDate != null">
+            AND Income_T.incDatetime <![CDATA[>=]]> #{beginDate}
+        </if>
+        <if test="endDate != null">
+            AND Income_T.incDatetime <![CDATA[<=]]> #{endDate}
+        </if>
+    </select>
+
+    <!--按用户时间段查找-->
+    <select id="queryByIncDateOfUser" resultMap="incQuery">
+        select * from Income_T where userNo = #{userNo}
+        <if test="beginDate != null">
+            AND Income_T.incDatetime <![CDATA[>=]]> #{beginDate}
+        </if>
+        <if test="endDate != null">
+            AND Income_T.incDatetime <![CDATA[<=]]> #{endDate}
+        </if>AND userNo = #{userNo}
+    </select>
+
+    <!--全部查找-->
+    <select id="queryAllInc" resultMap="incQuery">
+        select *
+        from Income_T
+        order by userNo, incDatetime DESC
+    </select>
+
+    <!--插入-->
+    <insert id="insertInc" parameterType="stu.xuronghao.ledger.entity.Income">
+        insert into Income_T(incNo, incEvent, incType, incAmount, incRemark, incDatetime, userNo)
+        values (#{incNo}, #{incEvent}, #{incType}, #{incAmount}, #{incRemark}, #{incDate}, #{userNo})
+    </insert>
+
+    <!--更新-->
+    <update id="updateInc" parameterType="stu.xuronghao.ledger.entity.Income">
+        update Income_T
+        set incEvent  = #{incEvent},
+            incAmount = #{incAmount},
+            incRemark = #{incRemark}
+        where incNo = #{incNo}
+    </update>
+
+    <!--删除-->
+    <delete id="deleteInc" parameterType="stu.xuronghao.ledger.entity.Income">
+        delete
+        from Income_T
+        where incNo = #{incNo}
+    </delete>
+</mapper>

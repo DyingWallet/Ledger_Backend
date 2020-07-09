@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="stu.xuronghao.ledger.mapper.HistoryMapper">
+    <resultMap id="chatInfo" type="stu.xuronghao.ledger.entity.ChatInfo">
+        <result column="userNo" property="userNo"/>
+        <result column="hisDate" property="Datetime"/>
+        <result column="hisContent" property="Content"/>
+        <result column="isMeSend" property="isMeSend"/>
+    </resultMap>
+
+
+    <select id="queryByUser" resultMap="chatInfo">
+        select * from History_T where userNo = #{userNo} ORDER BY hisDate
+    </select>
+
+    <insert id="insertByUser" parameterType="stu.xuronghao.ledger.entity.ChatInfo">
+        insert into History_T (userNo, hisDate, hisContent, isMeSend) VALUES (#{userNo},#{Datetime},#{Content},#{isMeSend})
+    </insert>
+
+
+</mapper>

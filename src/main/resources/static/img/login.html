@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 text-center">
+            <div class="login-brand" style="margin: 20px 0; margin-bottom: 40px;font-size: 24px;text-transform: uppercase;letter-spacing: 4px;color: #666;text-align: center">
+                <img src="/img/stisla-fill.svg" alt="logo" width="100" class="shadow-light rounded-circle " style="box-shadow: 0 2px 6px #e6ecf1; border-radius: 50%!important; vertical-align: middle; border-style: none">
+            </div>
+            <div class="card card-primary " style="border-top: 2px solid #6777ef; margin-top: 70px ">
+<!--                <br/>-->
+                <div class="car-header" style="
+                border-bottom-color: #f9f9f9;
+                line-height: 30px;
+                align-self: center;
+                padding: 15px 25px;
+                min-height: 70px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                border-bottom:1px solid rgba(0,0,0,.125)">
+                    <h4 style="
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: #6777ef;
+                    padding-right: 10px;
+                    margin-bottom: 0;
+                    font-weight:700">登录</h4>
+                </div>
+                <form action="/admin/adminlogin"  method="POST" class = "needs-validation" novalidate >
+                    <div class="car-body" style="background-color: transparent; padding: 20px 25px">
+                        <div class="form-group login-form-item" style="margin-bottom: 25px ; text-align: left">
+                            <label style="font-weight: 600; color: #34395e; font-size: 12px; letter-spacing: 1px; display: inline-block; margin-bottom: .5rem ">账号</label>
+                            <input type="id" name="adminId" class="form-control" style="height: 42px">
+                            <div class="invalid-feedback">
+                                请填写账号
+                            </div>
+                        </div>
+                        <div class="form-group login-form-item" style="margin-bottom: 25px ; text-align: left">
+                            <label  style="font-weight: 600; color: #34395e; font-size: 12px; letter-spacing: 1px; display: inline-block; margin-bottom: .5rem">密码</label>
+                            <input type="password" name="password" class="form-control" style="height: 42px">
+                            <div class="invalid-feedback">
+                                请填写账号
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block login" tabindex="4" style="
+                            box-shadow: 0 2px 6px #acb5f6;
+                            background-color: #6777ef;
+                             border-color: #6777ef;
+                             font-weight: 600;
+                             letter-spacing: .5px;
+                             padding: 0.9rem 1.5rem;
+                             font-size: 12px">
+                                登录
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

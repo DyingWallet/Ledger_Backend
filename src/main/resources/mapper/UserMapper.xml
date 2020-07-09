@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="stu.xuronghao.ledger.mapper.UserMapper">
+    <resultMap id="userQuery" type="stu.xuronghao.ledger.entity.User">
+        <result column="userNo" property="userNo"/>
+        <result column="userName" property="userName"/>
+        <result column="userPasswd" property="userPasswd"/>
+        <result column="userStatus" property="userStatus"/>
+        <result column="userCredits" property="userCredits"/>
+    </resultMap>
+
+    <!--精确查询-->
+    <select id="queryByUserNo" resultMap="userQuery">
+        select *
+        from User_T
+        where userNo = #{userNo}
+    </select>
+
+    <!--模糊查询-->
+    <select id="queryByUserName" resultMap="userQuery">
+        select *
+        from User_T
+        where userName like concat('%', '${userName}', '%')
+    </select>
+
+    <!--整表查询！！
+        管理员操作-->
+    <select id="queryAllUser" resultMap="userQuery">
+        select *
+        from User_T
+    </select>
+
+    <!--查询记录条数-->
+    <select id="countAll" resultType="Integer">
+        select count(*) from User_T
+    </select>
+
+    <!--用户注册-->
+    <insert id="insertUser" parameterType="stu.xuronghao.ledger.entity.User">
+        insert into User_T(userNo, userName, userPasswd, userStatus, userCredits)
+        VALUES (#{userNo}, #{userName}, #{userPasswd}, #{userStatus}, #{userCredits})
+    </insert>
+
+    <!--修改密码-->
+    <update id="changeUserPasswd" parameterType="stu.xuronghao.ledger.entity.User">
+        update User_T
+        set userPasswd = #{userPasswd}
+        where userNo = #{userNo}
+    </update>
+
+    <!--积分变动-->
+    <update id="creditsChanges" parameterType="stu.xuronghao.ledger.entity.User">
+        update User_T
+        set userCredits = #{userCredits}
+        where userNo = #{userNo}
+    </update>
+
+    <!--状态变动-->
+    <update id="setUserStatus" parameterType="stu.xuronghao.ledger.entity.User">
+        update User_T
+        set userStatus = #{userStatus}
+        where userNo = #{userNo}
+    </update>
+
+    <!--用户删除！！
+        管理员操作-->
+    <delete id="deleteUser" parameterType="stu.xuronghao.ledger.entity.User">
+        delete
+        from User_T
+        where userNo = #{userNo}
+    </delete>
+</mapper>
