@@ -33,7 +33,7 @@ public class AnnoController {
     public String queryByAnnoName(@RequestParam(value = "annoTitle") String annoTitle) {
         log.info("Ready to query anno: " + annoTitle);
         List<Anno> annos = annoService.queryByTitle(annoTitle);
-        return JSON.toJSONString(annos,SerializerFeature.WriteClassName);
+        return JSON.toJSONString(annos, SerializerFeature.WriteClassName);
     }
 
     //按类型查询
@@ -41,7 +41,7 @@ public class AnnoController {
     public String queryByAnnoType(@RequestParam(value = "annoType") String annoType) {
         log.info("Ready to query anno: " + annoType);
         List<Anno> annos = annoService.queryByAnnoType(annoType);
-        return JSON.toJSONString(annos,SerializerFeature.WriteClassName);
+        return JSON.toJSONString(annos, SerializerFeature.WriteClassName);
     }
 
     //按管理员编号查询
@@ -49,17 +49,17 @@ public class AnnoController {
     public String queryByAnnoAdmin(@RequestParam(value = "adminNo") String adminNo) {
         log.info("Ready to query anno: " + adminNo);
         List<Anno> annos = annoService.queryByAnnoAdmin(adminNo);
-        return JSON.toJSONString(annos,SerializerFeature.WriteClassName);
+        return JSON.toJSONString(annos, SerializerFeature.WriteClassName);
     }
 
     //按日期范围查询
     @GetMapping("/queryByDate")
     public String queryByAnnoDate(@RequestParam(value = "beginDate") Date beginDate,
-                                      @RequestParam(value = "endDate") Date endDate) {
+                                  @RequestParam(value = "endDate") Date endDate) {
         log.info("Ready to query anno between + " + beginDate + " and " + endDate);
 
         List<Anno> annos = annoService.queryByAnnoDate(beginDate, endDate);
-        return JSON.toJSONString(annos,SerializerFeature.WriteClassName);
+        return JSON.toJSONString(annos, SerializerFeature.WriteClassName);
     }
 
     //查询所有
@@ -68,13 +68,13 @@ public class AnnoController {
     public String queryAllAnno() {
         log.info("Ready to query all anno!");
         List<Anno> annos = annoService.queryAllAnno();
-        return JSON.toJSONString(annos,SerializerFeature.WriteClassName);
+        return JSON.toJSONString(annos, SerializerFeature.WriteClassName);
     }
 
     //插入新公告
     @PostMapping(value = "/insertAnno", produces = "application/json;charset=UTF-8")
     public boolean insertAnno(@RequestBody String annoJson) {
-        Anno anno = JSON.parseObject(annoJson,Anno.class);
+        Anno anno = JSON.parseObject(annoJson, Anno.class);
         log.info("Ready to insert anno: " + anno.toString());
         return annoService.insertAnno(anno);
     }
@@ -82,7 +82,7 @@ public class AnnoController {
     //更新公告
     @PostMapping(value = "/updateAnno", produces = "application/json;charset=UTF-8")
     public boolean updateAnno(@RequestBody String annoJson) {
-        Anno anno = JSON.parseObject(annoJson,Anno.class);
+        Anno anno = JSON.parseObject(annoJson, Anno.class);
         log.info("Ready to update anno: " + anno.toString());
         return annoService.updateAnno(anno);
     }

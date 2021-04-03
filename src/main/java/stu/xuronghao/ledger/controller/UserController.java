@@ -22,7 +22,8 @@ public class UserController {
             LoggedOut = 0,
             NoUser = -1,
             WrongPasswd = -2,
-            FrozenUser=-3;
+            FrozenUser = -3;
+
     //按编号精确查找
     @GetMapping("/queryByUserNo")
     public String queryByUserNo(@RequestParam(value = "userNo") String userNo) {
@@ -63,8 +64,8 @@ public class UserController {
     }
 
     //用户登录
-    @PostMapping(value = "/Login",produces = "application/json;charset-UTF-8")
-    public User UserLogin(@RequestBody User user){
+    @PostMapping(value = "/Login", produces = "application/json;charset-UTF-8")
+    public User UserLogin(@RequestBody User user) {
 
         userService.UserLogin(user);
         log.info(user.toString());
@@ -81,7 +82,7 @@ public class UserController {
     //更改密码
     @PostMapping(value = "/changeUserPasswd", produces = "application/json;charset=UTF-8")
     public boolean changeUserPasswd(@RequestBody String userJson) {
-        User user = JSON.parseObject(userJson,User.class);
+        User user = JSON.parseObject(userJson, User.class);
         log.info("Ready to update passwd: " + user.getUserNo());
         return userService.changeUserPasswd(user);
     }
@@ -97,7 +98,7 @@ public class UserController {
     //用户删除
     @PostMapping(value = "/deleteUser", produces = "application/json;charset:UTF-8")
     public boolean deleteUser(@RequestBody String userJson) {
-        User user = JSON.parseObject(userJson,User.class);
+        User user = JSON.parseObject(userJson, User.class);
         log.warn("Ready to delete user: " + user);
         if (userService.deleteUser(user.getUserNo())) {
             log.warn("User: " + user.getUserNo() + " has been deleted");

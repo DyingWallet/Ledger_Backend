@@ -21,7 +21,7 @@ public class StoreController {
 
     //精确查找
     @GetMapping("/queryByProNo")
-    public String queryByProNo(@RequestParam(value = "proNo")String proNo){
+    public String queryByProNo(@RequestParam(value = "proNo") String proNo) {
         log.info("Ready to query pro by No:" + proNo);
         Product product = productService.queryByProNo(proNo);
         return JSON.toJSONString(product, SerializerFeature.WriteClassName);
@@ -29,7 +29,7 @@ public class StoreController {
 
     //按名模糊查找
     @GetMapping("/queryByProName")
-    public String queryByProName(@RequestParam(value = "proName")String proName){
+    public String queryByProName(@RequestParam(value = "proName") String proName) {
         log.info("Ready to query pro by Name:" + proName);
         List<Product> products = productService.queryByProName(proName);
         return JSON.toJSONString(products, SerializerFeature.WriteClassName);
@@ -37,7 +37,7 @@ public class StoreController {
 
     //按类型查找
     @GetMapping("/queryByProType")
-    public String queryByProType(@RequestParam(value = "proType")String proType){
+    public String queryByProType(@RequestParam(value = "proType") String proType) {
         log.info("Ready to query pro by Type: " + proType);
         List<Product> products = productService.queryByProType(proType);
         return JSON.toJSONString(products, SerializerFeature.WriteClassName);
@@ -45,7 +45,7 @@ public class StoreController {
 
     //查找所有
     @GetMapping("/queryAllPro")
-    public String queryAllPro(){
+    public String queryAllPro() {
         log.info("Ready to query all Pro!");
         List<Product> products = productService.queryAllPro();
         return JSON.toJSONString(products, SerializerFeature.WriteClassName);
@@ -53,22 +53,22 @@ public class StoreController {
 
     //新增商品
     @PostMapping(value = "/insertPro", produces = "application/json;charset=UTF-8")
-    public boolean insertPro(@RequestBody String proJson){
-        Product product = JSON.parseObject(proJson,Product.class);
+    public boolean insertPro(@RequestBody String proJson) {
+        Product product = JSON.parseObject(proJson, Product.class);
         log.info("Ready to insert a new Pro: " + product.toString());
         return productService.insertPro(product);
     }
 
     //上架商品
     @PostMapping(value = "/OnShelf", produces = "application/json;charset=UTF-8")
-    public boolean OnShelf(@RequestBody String proNo){
+    public boolean OnShelf(@RequestBody String proNo) {
         log.info("Ready to On-Shelf Pro: " + proNo);
         return productService.OnShelf(proNo);
     }
 
     //下架商品
     @PostMapping(value = "/OffShelf", produces = "application/json;charset=UTF-8")
-    public boolean OffShelf(@RequestBody String proNo){
+    public boolean OffShelf(@RequestBody String proNo) {
         log.info("Ready to Off-Shelf Pro: " + proNo);
         return productService.OffShelf(proNo);
     }

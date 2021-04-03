@@ -59,7 +59,7 @@ public class IncomeController {
     public String queryByIncomeDate(@RequestParam(value = "beginDate") String beginDate,
                                     @RequestParam(value = "endDate") String endDate) {
         log.info("Ready to query income between + " + beginDate + " and " + endDate);
-        List<Income> incomes =  incomeService.queryByIncDate(beginDate, endDate);
+        List<Income> incomes = incomeService.queryByIncDate(beginDate, endDate);
         return JSON.toJSONString(incomes, SerializerFeature.WriteClassName);
     }
 
@@ -77,32 +77,32 @@ public class IncomeController {
     @GetMapping("/queryAllIncome")
     public String queryAllIncome() {
         log.info("Ready to query all income!");
-        List<Income> incomes =  incomeService.queryAllInc();
+        List<Income> incomes = incomeService.queryAllInc();
         return JSON.toJSONString(incomes, SerializerFeature.WriteClassName);
     }
 
     //插入
     @PostMapping(value = "/insertIncome", produces = "application/json;charset=UTF-8")
     public boolean insertIncome(@RequestBody String incomeJson) {
-        Income income = JSON.parseObject(incomeJson,Income.class);
+        Income income = JSON.parseObject(incomeJson, Income.class);
         log.info("Ready to insert income: " + income.toString());
         return incomeService.insertInc(income);
     }
 
     //交互插入
     @PostMapping(value = "/incomeChat", produces = "application/json;charset=UTF-8")
-    public String incomeChat(@RequestBody String infoJson){
+    public String incomeChat(@RequestBody String infoJson) {
         String incomeJson = infoJson.split("<<->>")[0];
         String chatJson = infoJson.split("<<->>")[1];
-        Income income = JSON.parseObject(incomeJson,Income.class);
-        ChatInfo chat = JSON.parseObject(chatJson,ChatInfo.class);
-        return JSON.toJSONString(incomeService.incomeChat(income,chat),SerializerFeature.WriteClassName);
+        Income income = JSON.parseObject(incomeJson, Income.class);
+        ChatInfo chat = JSON.parseObject(chatJson, ChatInfo.class);
+        return JSON.toJSONString(incomeService.incomeChat(income, chat), SerializerFeature.WriteClassName);
     }
 
     //更新
     @PostMapping(value = "/updateIncome", produces = "application/json;charset=UTF-8")
     public boolean updateIncome(@RequestBody String incomeJson) {
-        Income income = JSON.parseObject(incomeJson,Income.class);
+        Income income = JSON.parseObject(incomeJson, Income.class);
         log.info("Ready to update income: " + income.toString());
         return incomeService.updateInc(income);
     }
@@ -110,7 +110,7 @@ public class IncomeController {
     //删除
     @PostMapping(value = "/deleteIncome", produces = "application/json;charset=UTF-8")
     public boolean deleteIncome(@RequestBody String incomeJson) {
-        Income income = JSON.parseObject(incomeJson,Income.class);
+        Income income = JSON.parseObject(incomeJson, Income.class);
         log.warn("Ready to delete income: " + income.toString());
         return incomeService.deleteInc(income);
     }

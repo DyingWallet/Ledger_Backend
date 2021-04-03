@@ -12,7 +12,7 @@ public class HistoryService {
     @Resource
     HistoryMapper mapper;
 
-    public List<ChatInfo> queryByUser(String userNo){
+    public List<ChatInfo> queryByUser(String userNo) {
         return mapper.queryByUser(userNo);
     }
 

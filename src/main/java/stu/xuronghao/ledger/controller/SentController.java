@@ -16,7 +16,7 @@ public class SentController {
     HistoryService historyService;
 
     @GetMapping("/getHistoryByUser")
-    public String getHistoryByUser(@RequestParam(value = "userNo") String userNo){
+    public String getHistoryByUser(@RequestParam(value = "userNo") String userNo) {
         List<ChatInfo> temp = historyService.queryByUser(userNo);
         return JSON.toJSONString(temp, SerializerFeature.WriteClassName);
 

@@ -60,18 +60,18 @@ public class AdminServiceImp implements AdminService {
 
     @Override
     public Admin login(String id, String password) {
-        Admin admin = dao.adminLogin(id,password);
+        Admin admin = dao.adminLogin(id, password);
         return admin;
     }
 
     @Override
     public void adminUpdatePasswd(String newPasswd, String adminNo) {
-        dao.adminUpdatePasswd(newPasswd,adminNo);
-        return ;
+        dao.adminUpdatePasswd(newPasswd, adminNo);
+        return;
     }
 
     @Override
     public void postAnnounce(String title, String type, String content, String date, String adminNo) {
-        dao.insertAnnounce("123",title,type,content,date,adminNo);
+        dao.insertAnnounce("123", title, type, content, date, adminNo);
     }
 }

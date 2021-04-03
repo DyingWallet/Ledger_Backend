@@ -88,7 +88,7 @@ public class UserService {
 
     //插入用户
     public boolean insertUser(User user) {
-        if(mapper.queryByUserNo(user.getUserNo())==null){
+        if (mapper.queryByUserNo(user.getUserNo()) == null) {
             ChatInfo chat = new ChatInfo();
             user.setUserStatus(Activited);
             chat.setUserNo(user.getUserNo());
@@ -96,7 +96,7 @@ public class UserService {
             chat.setIsMeSend(0);
             chat.setDatetime(DateHandler.getCurrentDatetime());
             return mapper.insertUser(user) && historyMapper.insertByUser(chat);
-        }else
+        } else
             return false;
     }
 }

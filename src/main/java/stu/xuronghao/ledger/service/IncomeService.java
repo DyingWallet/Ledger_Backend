@@ -61,15 +61,16 @@ public class IncomeService {
     }
 
     public List<Income> queryByIncDateOfUser(String userNo, String beginDate, String endDate) {
-        return mapper.queryByIncDateOfUser(userNo,beginDate,endDate);
+        return mapper.queryByIncDateOfUser(userNo, beginDate, endDate);
     }
+
     public ChatInfo incomeChat(Income income, ChatInfo chat) {
-        if(insertInc(income) && historyMapper.insertByUser(chat)){
+        if (insertInc(income) && historyMapper.insertByUser(chat)) {
             chat.setUserNo(income.getUserNo());
             chat.setContent(sentService.getReply());
             chat.setIsMeSend(0);
             chat.setDatetime(DateHandler.getCurrentDatetime());
-            if(historyMapper.insertByUser(chat))
+            if (historyMapper.insertByUser(chat))
                 return chat;
         }
         return null;

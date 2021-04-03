@@ -6,7 +6,8 @@ public class Admin {
     private String adminPasswd;
     private int adminStatus;
 
-    public Admin(){}
+    public Admin() {
+    }
 
     public Admin(String name) {
         adminName = name;

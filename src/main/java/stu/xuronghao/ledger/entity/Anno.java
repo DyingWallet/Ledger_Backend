@@ -9,7 +9,8 @@ public class Anno {
     private String annoDate;
     private String adminNo;
 
-    public Anno(){}
+    public Anno() {
+    }
 
     public Anno(String annoNo, String annoTitle,
                 String annoContent, String annoDate, String adminNo) {

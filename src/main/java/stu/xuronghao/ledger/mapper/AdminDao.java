@@ -1,7 +1,6 @@
 package stu.xuronghao.ledger.mapper;
 
 
-
 import stu.xuronghao.ledger.entity.*;
 import org.apache.ibatis.annotations.*;
 
@@ -12,7 +11,7 @@ public interface AdminDao {
 
 
     /**
-     *  query all user
+     * query all user
      */
     @Select("select * from User_T")
     List<User> findAllUser();
@@ -24,67 +23,67 @@ public interface AdminDao {
     List<User> findUserByKey(@Param("key") String Key);
 
     /**
-     *  change user status
+     * change user status
      */
     @Update("update User_T set userStatus = userStatus^1 where userNo = #{userNo}")
     void updateUserStatus(@Param("userNo") String id);
 
     /**
-     *  post an announce
+     * post an announce
      */
     @Insert("insert into Announce_T values(#{annoNo},#{annoTitle},#{annoType},#{annoContent},#{annoDate},#{adminNo})")
-    void insertAnnounce(@Param("annoNo") String annoNo,@Param("annoTitle") String annoTitle,@Param("annoType") String annoType, @Param("annoContent") String annoContent,
+    void insertAnnounce(@Param("annoNo") String annoNo, @Param("annoTitle") String annoTitle, @Param("annoType") String annoType, @Param("annoContent") String annoContent,
                         @Param("annoDate") String annoDate, @Param("adminNo") String adminNo);
 
 
     /**
-     *  delete an announce
+     * delete an announce
      */
     @Delete("delete from Announce_T where annoNo = #{annoNo}")
     void dateleAnnounce(@Param("annoNo") String annoNo);
 
     /**
-     *  query announce
+     * query announce
      */
     @Select("select * from Announce_T where annoContent like concat('%',#{key},'%') order by annoDate desc")
-    List<Anno>queryAnnounce(@Param("key") String key);
+    List<Anno> queryAnnounce(@Param("key") String key);
 
     /**
-     *  query all feedback
+     * query all feedback
      */
     @Select("select * from Feedback_T order by fbDate desc ")
     List<Feedback> findAllFeedback();
 
     /**
-     *  Processed feedback
+     * Processed feedback
      */
     @Update("update Feedback_T set fbRead = fbRead ^ true where fbno = #{fbno}")
     void processedFeedback(@Param("fbno") String fbno);
 
     /**
-     *  admin login
+     * admin login
      */
     @Select("select * from  Admin_T where adminNo = #{adminNo} and adminPasswd = #{adminPasswd}")
-    Admin adminLogin(@Param("adminNo")String adminNo, @Param("adminPasswd") String adminPasswd);
+    Admin adminLogin(@Param("adminNo") String adminNo, @Param("adminPasswd") String adminPasswd);
 
     /**
-     *  admin_UpdatePassword
+     * admin_UpdatePassword
      */
     @Update("update Admin_T set adminPasswd = #{newPasswd} where adminNo = #{adminNo}")
-    void adminUpdatePasswd(@Param("newPasswd")String newPasswd, @Param("adminNo") String adminNo);
+    void adminUpdatePasswd(@Param("newPasswd") String newPasswd, @Param("adminNo") String adminNo);
 
     /**
-     *  revocationAnnounce
+     * revocationAnnounce
      */
     @Update("update Announce_T set annoType = 1 where annoNo = #{annoNo}")
     void revocationAnnounce(@Param("annoNo") String id);
 
 
     /**
-     *  updateProduct
+     * updateProduct
      */
     @Update("update Products_T set proName = #{proName} , proNumber = #{proNumber} , proType = #{proType} , proPrice = #{proPrice}, proDiscount = #{proDiscount}, proStatus= #{proStatus} where proNo = #{proNo}")
-    void updateProduct(@Param("proNo")String proNo, @Param("proName")String proName,@Param("proType")String proType, @Param("proPrice")String proPrice, @Param("proDiscount")String proDiscount,@Param("proStatus")String proStatus);
+    void updateProduct(@Param("proNo") String proNo, @Param("proName") String proName, @Param("proType") String proType, @Param("proPrice") String proPrice, @Param("proDiscount") String proDiscount, @Param("proStatus") String proStatus);
 
     /**
      *  putOnSale 。。。

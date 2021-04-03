@@ -21,14 +21,14 @@ public class AdminLoginFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         System.out.println("doFilter");
-        HttpServletRequest req = (HttpServletRequest)servletRequest;
+        HttpServletRequest req = (HttpServletRequest) servletRequest;
         HttpSession session = req.getSession();
         HttpServletResponseWrapper wrapper = new HttpServletResponseWrapper((HttpServletResponse) servletResponse);
         System.out.println(req.getRequestURI());
         //登录则放行
-        if( (req.getRequestURI().indexOf("/login") != -1 || session.getAttribute("admin") != null || req.getRequestURI().indexOf("/adminlogin") != -1) || (req.getRequestURI().indexOf("/img/") != -1)){
-            filterChain.doFilter(servletRequest,servletResponse);
-        }else{
+        if ((req.getRequestURI().indexOf("/login") != -1 || session.getAttribute("admin") != null || req.getRequestURI().indexOf("/adminlogin") != -1) || (req.getRequestURI().indexOf("/img/") != -1)) {
+            filterChain.doFilter(servletRequest, servletResponse);
+        } else {
             wrapper.sendRedirect("/admin/login");
         }
 

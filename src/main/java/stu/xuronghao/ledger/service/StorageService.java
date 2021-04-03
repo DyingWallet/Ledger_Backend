@@ -14,7 +14,7 @@ public class StorageService {
 
 
     public Product queryOneItem(String proNo, String userNo) {
-        return mapper.queryOneItem(proNo,userNo);
+        return mapper.queryOneItem(proNo, userNo);
     }
 
     public List<Product> queryByItem(String proNo) {

@@ -60,6 +60,6 @@ public class FeedbackService {
 
 
     public List<Feedback> queryByDateOfUser(String userNo, Date beginDate, Date endDate) {
-        return mapper.queryByDateOfUser(userNo,beginDate,endDate);
+        return mapper.queryByDateOfUser(userNo, beginDate, endDate);
     }
 }

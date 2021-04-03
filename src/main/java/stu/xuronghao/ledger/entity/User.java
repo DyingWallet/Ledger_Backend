@@ -7,16 +7,17 @@ public class User {
     private int userStatus = 0;
     private int userCredits = 0;
 
-    public User(){}
+    public User() {
+    }
 
     //注册
-    public User(String userName,String userPasswd){
+    public User(String userName, String userPasswd) {
         this.userName = userName;
         this.userPasswd = userPasswd;
     }
 
     //删除
-    public User(String userNo){
+    public User(String userNo) {
         this.userNo = userNo;
     }
 

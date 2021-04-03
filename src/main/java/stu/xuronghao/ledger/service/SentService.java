@@ -12,13 +12,13 @@ public class SentService {
     @Resource
     SentenceMapper mapper;
 
-    public String getReply(){
+    public String getReply() {
         int id = 0;
         Random random = new Random();
         Sentence sentence;
 
         id = 1 + random.nextInt(mapper.CountAll());
-        
+
         sentence = mapper.getSentence(id);
         return sentence.getContent();
     }

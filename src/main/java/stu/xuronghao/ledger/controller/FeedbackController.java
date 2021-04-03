@@ -22,7 +22,7 @@ public class FeedbackController {
 
     //精确查找
     @GetMapping("/queryByNo")
-    public String queryByNo(@RequestParam(value = "fbNo")String fbNo){
+    public String queryByNo(@RequestParam(value = "fbNo") String fbNo) {
         log.info("Ready to query feedback: " + fbNo);
         Feedback feedback = feedbackService.queryByNo(fbNo);
         return JSON.toJSONString(feedback, SerializerFeature.WriteClassName);
@@ -30,7 +30,7 @@ public class FeedbackController {
 
     //模糊查找
     @GetMapping("/queryByTitle")
-    public String queryByTitle(@RequestParam(value = "fbTitle")String fbTitle){
+    public String queryByTitle(@RequestParam(value = "fbTitle") String fbTitle) {
         log.info("Ready to query feedback: " + fbTitle);
         List<Feedback> feedbacks = feedbackService.queryByTitle(fbTitle);
         return JSON.toJSONString(feedbacks, SerializerFeature.WriteClassName);
@@ -38,7 +38,7 @@ public class FeedbackController {
 
     //类型查找
     @GetMapping("/queryByType")
-    public String queryByType(@RequestParam(value = "fbType")String fbType){
+    public String queryByType(@RequestParam(value = "fbType") String fbType) {
         log.info("Ready to query feedback: " + fbType);
         List<Feedback> feedbacks = feedbackService.queryByType(fbType);
         return JSON.toJSONString(feedbacks, SerializerFeature.WriteClassName);
@@ -46,7 +46,7 @@ public class FeedbackController {
 
     //按管理员查找
     @GetMapping("/queryByAdmin")
-    public String queryByAdmin(@RequestParam(value = "adminNo")String adminNo){
+    public String queryByAdmin(@RequestParam(value = "adminNo") String adminNo) {
         log.info("Ready to query feedback by admin: " + adminNo);
         List<Feedback> feedbacks = feedbackService.queryByAdmin(adminNo);
         return JSON.toJSONString(feedbacks, SerializerFeature.WriteClassName);
@@ -54,7 +54,7 @@ public class FeedbackController {
 
     //按用户查找
     @GetMapping("/queryByUser")
-    public String queryByUser(@RequestParam(value = "userNo")String userNo){
+    public String queryByUser(@RequestParam(value = "userNo") String userNo) {
         log.info("Ready to query feedback by user: " + userNo);
         List<Feedback> feedbacks = feedbackService.queryByUser(userNo);
         return JSON.toJSONString(feedbacks, SerializerFeature.WriteClassName);
@@ -62,29 +62,29 @@ public class FeedbackController {
 
     //时间段查找
     @GetMapping("/queryByDate")
-    public String queryByDate(@RequestParam(value = "beginDate")Date beginDate,
-                                        @RequestParam(value = "endDate")Date endDate){
+    public String queryByDate(@RequestParam(value = "beginDate") Date beginDate,
+                              @RequestParam(value = "endDate") Date endDate) {
         log.info("Ready to query feedback between: " + beginDate.toString() + " and " + endDate.toString());
 
-        List<Feedback> feedbacks = feedbackService.queryByDate(beginDate,endDate);
+        List<Feedback> feedbacks = feedbackService.queryByDate(beginDate, endDate);
         return JSON.toJSONString(feedbacks, SerializerFeature.WriteClassName);
     }
 
     //按用户时间段查找
     @GetMapping("/queryByDateOfUser")
-    public String queryByDateOfUser(@RequestParam(value = "userNo")String userNo,
-                                    @RequestParam(value = "beginDate")Date beginDate,
-                                    @RequestParam(value = "endDate")Date endDate){
+    public String queryByDateOfUser(@RequestParam(value = "userNo") String userNo,
+                                    @RequestParam(value = "beginDate") Date beginDate,
+                                    @RequestParam(value = "endDate") Date endDate) {
         log.info("Ready to query feedback between: "
                 + beginDate.toString() + " and " + endDate.toString() + " Of " + userNo);
 
-        List<Feedback> feedbacks = feedbackService.queryByDateOfUser(userNo,beginDate,endDate);
+        List<Feedback> feedbacks = feedbackService.queryByDateOfUser(userNo, beginDate, endDate);
         return JSON.toJSONString(feedbacks, SerializerFeature.WriteClassName);
     }
 
     //查找所有
     @GetMapping("/queryAllFb")
-    public String queryAllFb(){
+    public String queryAllFb() {
         log.info("Ready to query all feedback");
 
         List<Feedback> feedbacks = feedbackService.queryAllFb();
@@ -92,18 +92,18 @@ public class FeedbackController {
     }
 
     //插入
-    @PostMapping(value = "/insertFb",produces = "application/json;charset=UTF-8")
-    public boolean insertFb(@RequestBody String fbJson){
-        Feedback feedback = JSON.parseObject(fbJson,Feedback.class);
+    @PostMapping(value = "/insertFb", produces = "application/json;charset=UTF-8")
+    public boolean insertFb(@RequestBody String fbJson) {
+        Feedback feedback = JSON.parseObject(fbJson, Feedback.class);
         log.info("Ready to insert feedback: " + feedback.toString());
 
         return feedbackService.insertFb(feedback);
     }
 
     //删除
-    @PostMapping(value = "/deleteFb",produces = "application/json;charset=UTF-8")
-    public boolean deleteFb(@RequestBody String fbJson){
-        Feedback feedback = JSON.parseObject(fbJson,Feedback.class);
+    @PostMapping(value = "/deleteFb", produces = "application/json;charset=UTF-8")
+    public boolean deleteFb(@RequestBody String fbJson) {
+        Feedback feedback = JSON.parseObject(fbJson, Feedback.class);
         log.warn("Ready to delete feedback: " + feedback.getFbNo());
 
         return feedbackService.deleteFb(feedback.getFbNo());
