@@ -4,8 +4,9 @@ public class User {
     private String userNo;
     private String userName;
     private String userPasswd;
-    private int userStatus = 0;
-    private int userCredits = 0;
+    private String storage;
+    private int userStatus;
+    private int userCredits;
 
     public User() {
     }
@@ -43,6 +44,14 @@ public class User {
 
     public void setUserPasswd(String userPasswd) {
         this.userPasswd = userPasswd;
+    }
+
+    public String getStorage() {
+        return storage;
+    }
+
+    public void setStorage(String storage) {
+        this.storage = storage;
     }
 
     public int getUserStatus() {

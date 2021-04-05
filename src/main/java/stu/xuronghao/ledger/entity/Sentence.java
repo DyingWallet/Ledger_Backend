@@ -1,39 +1,37 @@
 package stu.xuronghao.ledger.entity;
 
 public class Sentence {
-    private int SenId;
-    private String Content;
+    private int sentenceId;
+    private String content;
 
     public Sentence(int senId, String content) {
-        SenId = senId;
-        Content = content;
+        sentenceId = senId;
+        this.content = content;
     }
 
-    public Sentence() {
+    public Sentence() {}
 
+    public int getSentenceId() {
+        return sentenceId;
     }
 
-    public int getSenId() {
-        return SenId;
-    }
-
-    public void setSenId(int senId) {
-        SenId = senId;
+    public void setSentenceId(int sentenceId) {
+        this.sentenceId = sentenceId;
     }
 
     public String getContent() {
-        return Content;
+        return content;
     }
 
     public void setContent(String content) {
-        Content = content;
+        this.content = content;
     }
 
     @Override
     public String toString() {
         return "Sentence{" +
-                "SenId=" + SenId +
-                ", Content='" + Content + '\'' +
+                "SenId=" + sentenceId +
+                ", Content='" + content + '\'' +
                 '}';
     }
 }
