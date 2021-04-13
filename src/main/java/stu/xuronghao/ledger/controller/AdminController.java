@@ -1,11 +1,15 @@
 package stu.xuronghao.ledger.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import stu.xuronghao.ledger.entity.*;
 import stu.xuronghao.ledger.service.AdminService;
-import stu.xuronghao.ledger.utils.DatetimeHandler;
+import stu.xuronghao.ledger.utils.ConstantVariable;
+import stu.xuronghao.ledger.utils.DateTimeHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import stu.xuronghao.ledger.utils.StringUtils;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -15,6 +19,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
+    public static final Logger log = LoggerFactory.getLogger(AdminController.class);
 
     @Resource
     private AdminService service;
@@ -26,7 +31,7 @@ public class AdminController {
      */
     @RequestMapping("/home")
     public String home() {
-        return "home";
+        return ConstantVariable.HOME;
     }
 
     /**
@@ -38,8 +43,8 @@ public class AdminController {
     @RequestMapping("/query")
     public String query(Model model) {
         List<User> list = service.queryAllUser();
-        model.addAttribute("list", list);
-        return "query";
+        model.addAttribute(ConstantVariable.LIST, list);
+        return ConstantVariable.QUERY;
     }
 
     /**
@@ -52,10 +57,10 @@ public class AdminController {
     @RequestMapping("/queryByKey")
     public String queryById(Model model, HttpServletRequest request) {
         String id = request.getParameter("key");
-//        System.out.println(id);
+        log.info(id);
         List<User> list = service.queryByKey(id);
-        model.addAttribute("list", list);
-        return "query";
+        model.addAttribute(ConstantVariable.LIST, list);
+        return ConstantVariable.QUERY;
     }
 
     /**
@@ -70,8 +75,8 @@ public class AdminController {
         String id = request.getParameter("id");
         service.updateUserStatus(id);
         List<User> list = service.queryAllUser();
-        model.addAttribute("list", list);
-        return "query";
+        model.addAttribute(ConstantVariable.LIST, list);
+        return ConstantVariable.QUERY;
     }
 
     /**
@@ -86,8 +91,8 @@ public class AdminController {
         String key = request.getParameter("key");
         if (key == null) key = "";
         List<Anno> list = service.queryAnnounce(key);
-        model.addAttribute("list", list);
-        return "announce";
+        model.addAttribute(ConstantVariable.LIST, list);
+        return ConstantVariable.ANNOUNCE;
     }
 
     /**
@@ -99,8 +104,8 @@ public class AdminController {
     @RequestMapping("/feedback")
     public String feedback(Model model) {
         List<Feedback> list = service.queryAllFeedback();
-        model.addAttribute("list", list);
-        return "feedback";
+        model.addAttribute(ConstantVariable.LIST, list);
+        return ConstantVariable.FEEDBACK;
     }
 
     /**
@@ -114,7 +119,8 @@ public class AdminController {
     public String processedFeedback(Model model, HttpServletRequest request) {
         String id = request.getParameter("id");
         service.processedFeedback(id);
-        return "redirect:feedback";
+        //"redirect:feedback"
+        return ConstantVariable.REDIRECT+ConstantVariable.FEEDBACK;
     }
 
     /**
@@ -127,7 +133,7 @@ public class AdminController {
     public String revocationAnnounce(HttpServletRequest request) {
         String id = request.getParameter("id");
         service.revocationAnnounce(id);
-        return "announce";
+        return ConstantVariable.ANNOUNCE;
     }
 
     /**
@@ -138,7 +144,7 @@ public class AdminController {
     @RequestMapping("/login")
     public String login() {
 
-        return "login";
+        return ConstantVariable.LOGIN;
     }
 
     /**
@@ -152,10 +158,11 @@ public class AdminController {
     public String adminLogin(HttpServletRequest request, HttpSession session) {
         String id = request.getParameter("adminId");
         String password = request.getParameter("password");
-//        System.out.println("id = " + id + "; pd = " + password);
+        log.info(StringUtils.format(ConstantVariable.SHOW_ID_PASSWD,id,password));
         Admin admin = service.login(id, password);
-        session.setAttribute("admin", admin);
-        return "redirect:home";
+        session.setAttribute(ConstantVariable.ADMIN, admin);
+        //"redirect:home"
+        return ConstantVariable.REDIRECT+ConstantVariable.HOME;
     }
 //    sudo apt install docker-ce=<focal 5:19.03.9~3-0~ubuntu-focal amd64> docker-ce-cli=<focal 5:19.03.9~3-0~ubuntu-focal amd64> containerd.io
 
@@ -167,8 +174,9 @@ public class AdminController {
      */
     @RequestMapping("/logout")
     public String logout(HttpSession session) {
-        session.removeAttribute("admin");
-        return "redirect:login";
+        session.removeAttribute(ConstantVariable.ADMIN);
+        //"redirect:login"
+        return ConstantVariable.REDIRECT+ConstantVariable.LOGIN;
     }
 
     /**
@@ -181,22 +189,19 @@ public class AdminController {
     @RequestMapping("/updatePassword")
     @ResponseBody
     public String updatePassword(HttpServletRequest request, HttpSession session) {
-        Admin admin = (Admin) session.getAttribute("admin");
-        System.out.println(admin);
+        Admin admin = (Admin) session.getAttribute(ConstantVariable.ADMIN);
+        log.info(admin.toString());
         String adminNo = admin.getAdminNo();
         String oldPassword = request.getParameter("oldpassword");
         String newPassword = request.getParameter("newpassword");
         if (admin.getAdminPasswd().equals(oldPassword)) {
-            System.out.println("!!!!");
             service.adminUpdatePasswd(newPassword, adminNo);
             admin = service.login(adminNo, newPassword);
-//            session.removeAttribute("admin");
-            session.setAttribute("admin", admin);
+            session.setAttribute(ConstantVariable.ADMIN, admin);
             return "1";
         } else {
             return "0";
         }
-//        return "";
     }
 
     /**
@@ -208,14 +213,15 @@ public class AdminController {
      */
     @RequestMapping("/postAnnounce")
     public String postAnnounce(HttpServletRequest request, HttpSession session) {
-        Admin admin = (Admin) session.getAttribute("admin");
+        Admin admin = (Admin) session.getAttribute(ConstantVariable.ADMIN);
         String title = request.getParameter("title");
         String type = "1";
         String content = request.getParameter("content");
-        String date = DatetimeHandler.getCurrentDatetime();
-        System.out.println(title + "\n" + type + "\n" + content + "\n" + date);
+        String date = DateTimeHandler.getCurrentDatetime();
+        log.info(StringUtils.format(ConstantVariable.SHOW_ANNO_INFO,title,type,content,date));
         service.postAnnounce(title, type, content, date, admin.getAdminNo());
-        return "redirect:/admin/announce";
+        //"redirect:/admin/announce"
+        return ConstantVariable.REDIRECT+ConstantVariable.SEND_ANNOUNCE;
     }
 
     /**
@@ -226,7 +232,7 @@ public class AdminController {
 //        String key = request.getParameter("key");
 //        if(key == null) key = "";
 //        List<Product> list = service.queryProduct(key);
-//        model.addAttribute("list",list);
+//        model.addAttribute(ConstantVariable.LIST,list);
 //        return "/products";
 //    }
 //

@@ -15,7 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/Cost")
 public class CostController {
-    private static final Logger log = LoggerFactory.getLogger(UserController.class);
+    private static final Logger log = LoggerFactory.getLogger(CostController.class);
 
     @Resource
     CostService costService;

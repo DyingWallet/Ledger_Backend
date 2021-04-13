@@ -1,43 +1,21 @@
 package stu.xuronghao.ledger.service;
 
 import stu.xuronghao.ledger.entity.Product;
-import stu.xuronghao.ledger.mapper.ProductMapper;
-import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
-@Service
-public class ProductService {
-    @Resource
-    ProductMapper mapper;
+public interface ProductService {
+    Product queryByProNo(String proNo);
 
+    List<Product> queryByProName(String proName);
 
-    public Product queryByProNo(String proNo) {
-        return mapper.queryByProNo(proNo);
-    }
+    List<Product> queryByProType(String proType);
 
-    public List<Product> queryByProName(String proName) {
-        return mapper.queryByProName(proName);
-    }
+    List<Product> queryAllPro();
 
-    public List<Product> queryByProType(String proType) {
-        return mapper.queryByProType(proType);
-    }
+    boolean insertPro(Product product);
 
-    public List<Product> queryAllPro() {
-        return mapper.queryAllPro();
-    }
+    boolean OnShelf(String proNo);
 
-    public boolean insertPro(Product product) {
-        return mapper.insertPro(product);
-    }
-
-    public boolean OnShelf(String proNo) {
-        return mapper.OnShelf(proNo);
-    }
-
-    public boolean OffShelf(String proNo) {
-        return mapper.OffShelf(proNo);
-    }
+    boolean OffShelf(String proNo);
 }

@@ -1,102 +1,28 @@
 package stu.xuronghao.ledger.service;
 
-import stu.xuronghao.ledger.entity.ChatInfo;
 import stu.xuronghao.ledger.entity.User;
-import stu.xuronghao.ledger.mapper.HistoryMapper;
-import stu.xuronghao.ledger.mapper.UserMapper;
-import stu.xuronghao.ledger.utils.DateHandler;
-import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
-@Service
-public class UserService {
-    @Resource
-    UserMapper mapper;
-    @Resource
-    HistoryMapper historyMapper;
-
-    private final int LoggedIn = 2,
-            Activited = 1,
-            FrozenUser = 0,
-            NoUser = -1,
-            WrongPasswd = -2;
-
+public interface UserService {
     //精确查找
-    public User queryByUserNo(String userNo) {
-        return mapper.queryByUserNo(userNo);
-    }
+    User queryByUserNo(String userNo);
 
     //模糊查找
-    public List<User> queryByUserName(String userName) {
-        return mapper.queryByUserName(userName);
-    }
+    List<User> queryByUserName(String userName);
 
     //查找所有
-    public List<User> queryAllUser() {
-        return mapper.queryAllUser();
-    }
+    List<User> queryAllUser();
 
     //修改密码
-    public boolean changeUserPasswd(User user) {
-        return mapper.changeUserPasswd(user);
-    }
+    boolean changeUserPasswd(User user);
 
     //删除用户
-    public boolean deleteUser(String userNo) {
-        return mapper.deleteUser(userNo);
-    }
+    boolean deleteUser(String userNo);
 
     //登录
-    public User UserLogin(User user) {
-        //从数据库中拉取数据
-        User tmp = mapper.queryByUserNo(user.getUserNo());
+    User UserLogin(User user);
 
-        //用户存在
-        if (tmp != null) {
-            //用户密码正确
-            if (user.getUserPasswd().equals(tmp.getUserPasswd())) {
-                if (tmp.getUserStatus() == Activited) {
-                    //改变登录状态
-                    user.setUserStatus(LoggedIn);
-                    //获取用户数据
-                    user.setUserName(tmp.getUserName());
-                    user.setUserCredits(tmp.getUserCredits());
-                } else if (tmp.getUserStatus() == FrozenUser) {
-                    //用户被冻结
-                    user.setUserPasswd(null);
-                    user.setUserStatus(FrozenUser);
-                }
-            } else {
-                //密码错误
-                user.setUserStatus(WrongPasswd);
-            }
-        } else {
-            //未注册
-            user.setUserStatus(NoUser);
-        }
-        return user;
-    }
-
-    //登出
-/*
-    public boolean UserLogout(User user){
-        return mapper.setUserStatus(user.getUserNo(),LoggedOut);
-    }
-*/
-
-    //插入用户
-    public boolean insertUser(User user) {
-        if (mapper.queryByUserNo(user.getUserNo()) == null) {
-            ChatInfo chat = new ChatInfo();
-            user.setUserStatus(Activited);
-            chat.setUserNo(user.getUserNo());
-            chat.setContent("欢迎使用治账！快记点什么吧！");
-            chat.setIsMeSend(0);
-            chat.setDatetime(DateHandler.getCurrentDatetime());
-            return mapper.insertUser(user) && historyMapper.insertByUser(chat);
-        } else
-            return false;
-    }
+    //新增用户
+    boolean insertUser(User user);
 }
