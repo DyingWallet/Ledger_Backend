@@ -31,7 +31,7 @@ public class AdminController {
      */
     @RequestMapping("/home")
     public String home() {
-        return ConstantVariable.HOME;
+        return ConstantVariable.HOME_PAGE;
     }
 
     /**
@@ -105,7 +105,7 @@ public class AdminController {
     public String feedback(Model model) {
         List<Feedback> list = service.queryAllFeedback();
         model.addAttribute(ConstantVariable.LIST, list);
-        return ConstantVariable.FEEDBACK;
+        return ConstantVariable.FEEDBACK_PAGE;
     }
 
     /**
@@ -120,7 +120,7 @@ public class AdminController {
         String id = request.getParameter("id");
         service.processedFeedback(id);
         //"redirect:feedback"
-        return ConstantVariable.REDIRECT+ConstantVariable.FEEDBACK;
+        return ConstantVariable.REDIRECT+ConstantVariable.FEEDBACK_PAGE;
     }
 
     /**
@@ -144,7 +144,7 @@ public class AdminController {
     @RequestMapping("/login")
     public String login() {
 
-        return ConstantVariable.LOGIN;
+        return ConstantVariable.LOGIN_PAGE;
     }
 
     /**
@@ -158,11 +158,11 @@ public class AdminController {
     public String adminLogin(HttpServletRequest request, HttpSession session) {
         String id = request.getParameter("adminId");
         String password = request.getParameter("password");
-        log.info(StringUtils.format(ConstantVariable.SHOW_ID_PASSWD,id,password));
+        log.info(StringUtils.format(ConstantVariable.LOG_ID_PASSWD,id,password));
         Admin admin = service.login(id, password);
-        session.setAttribute(ConstantVariable.ADMIN, admin);
+        session.setAttribute(ConstantVariable.ADMIN_PAGE, admin);
         //"redirect:home"
-        return ConstantVariable.REDIRECT+ConstantVariable.HOME;
+        return ConstantVariable.REDIRECT+ConstantVariable.HOME_PAGE;
     }
 //    sudo apt install docker-ce=<focal 5:19.03.9~3-0~ubuntu-focal amd64> docker-ce-cli=<focal 5:19.03.9~3-0~ubuntu-focal amd64> containerd.io
 
@@ -174,9 +174,9 @@ public class AdminController {
      */
     @RequestMapping("/logout")
     public String logout(HttpSession session) {
-        session.removeAttribute(ConstantVariable.ADMIN);
+        session.removeAttribute(ConstantVariable.ADMIN_PAGE);
         //"redirect:login"
-        return ConstantVariable.REDIRECT+ConstantVariable.LOGIN;
+        return ConstantVariable.REDIRECT+ConstantVariable.LOGIN_PAGE;
     }
 
     /**
@@ -189,7 +189,7 @@ public class AdminController {
     @RequestMapping("/updatePassword")
     @ResponseBody
     public String updatePassword(HttpServletRequest request, HttpSession session) {
-        Admin admin = (Admin) session.getAttribute(ConstantVariable.ADMIN);
+        Admin admin = (Admin) session.getAttribute(ConstantVariable.ADMIN_PAGE);
         log.info(admin.toString());
         String adminNo = admin.getAdminNo();
         String oldPassword = request.getParameter("oldpassword");
@@ -197,7 +197,7 @@ public class AdminController {
         if (admin.getAdminPasswd().equals(oldPassword)) {
             service.adminUpdatePasswd(newPassword, adminNo);
             admin = service.login(adminNo, newPassword);
-            session.setAttribute(ConstantVariable.ADMIN, admin);
+            session.setAttribute(ConstantVariable.ADMIN_PAGE, admin);
             return "1";
         } else {
             return "0";
@@ -213,12 +213,12 @@ public class AdminController {
      */
     @RequestMapping("/postAnnounce")
     public String postAnnounce(HttpServletRequest request, HttpSession session) {
-        Admin admin = (Admin) session.getAttribute(ConstantVariable.ADMIN);
+        Admin admin = (Admin) session.getAttribute(ConstantVariable.ADMIN_PAGE);
         String title = request.getParameter("title");
         String type = "1";
         String content = request.getParameter("content");
         String date = DateTimeHandler.getCurrentDatetime();
-        log.info(StringUtils.format(ConstantVariable.SHOW_ANNO_INFO,title,type,content,date));
+        log.info(StringUtils.format(ConstantVariable.LOG_ANNO_INFO,title,type,content,date));
         service.postAnnounce(title, type, content, date, admin.getAdminNo());
         //"redirect:/admin/announce"
         return ConstantVariable.REDIRECT+ConstantVariable.SEND_ANNOUNCE;

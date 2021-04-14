@@ -6,11 +6,20 @@ import java.util.TimeZone;
 
 public class DateTimeHandler {
     public static String getCurrentDatetime() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat dateFormat = new SimpleDateFormat(ConstantVariable.DATE_FORMAT);
 
-        TimeZone zone = TimeZone.getTimeZone("GMT+8:00");
+        TimeZone zone = TimeZone.getTimeZone(ConstantVariable.TIME_ZONE);
         dateFormat.setTimeZone(zone);
 
         return dateFormat.format(new Date());
+    }
+
+    public static String getDate(Date date){
+        SimpleDateFormat dateFormat = new SimpleDateFormat(ConstantVariable.DATE_FORMAT);
+        return dateFormat.format(date);
+    }
+
+
+    private DateTimeHandler() {
     }
 }

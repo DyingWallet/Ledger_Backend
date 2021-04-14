@@ -5,6 +5,7 @@ import stu.xuronghao.ledger.entity.User;
 import stu.xuronghao.ledger.mapper.HistoryMapper;
 import stu.xuronghao.ledger.mapper.UserMapper;
 import org.springframework.stereotype.Service;
+import stu.xuronghao.ledger.utils.ConstantVariable;
 import stu.xuronghao.ledger.utils.DateTimeHandler;
 
 import javax.annotation.Resource;
@@ -16,12 +17,6 @@ public class UserServiceImp implements stu.xuronghao.ledger.service.UserService 
     UserMapper mapper;
     @Resource
     HistoryMapper historyMapper;
-
-    private final int LoggedIn = 2,
-            Activited = 1,
-            FrozenUser = 0,
-            NoUser = -1,
-            WrongPasswd = -2;
 
     //精确查找
     @Override
@@ -63,43 +58,36 @@ public class UserServiceImp implements stu.xuronghao.ledger.service.UserService 
         if (tmp != null) {
             //用户密码正确
             if (user.getUserPasswd().equals(tmp.getUserPasswd())) {
-                if (tmp.getUserStatus() == Activited) {
+                if (ConstantVariable.ACTIVE == tmp.getUserStatus()) {
                     //改变登录状态
-                    user.setUserStatus(LoggedIn);
+                    user.setUserStatus(ConstantVariable.LOGGED_IN);
                     //获取用户数据
                     user.setUserName(tmp.getUserName());
                     user.setUserCredits(tmp.getUserCredits());
-                } else if (tmp.getUserStatus() == FrozenUser) {
+                } else if (ConstantVariable.FROZEN_USER == tmp.getUserStatus()) {
                     //用户被冻结
                     user.setUserPasswd(null);
-                    user.setUserStatus(FrozenUser);
+                    user.setUserStatus(ConstantVariable.FROZEN_USER);
                 }
             } else {
                 //密码错误
-                user.setUserStatus(WrongPasswd);
+                user.setUserStatus(ConstantVariable.WRONG_PASSWD);
             }
         } else {
             //未注册
-            user.setUserStatus(NoUser);
+            user.setUserStatus(ConstantVariable.NO_USER);
         }
         return user;
     }
-
-    //登出
-/*
-    public boolean UserLogout(User user){
-        return mapper.setUserStatus(user.getUserNo(),LoggedOut);
-    }
-*/
 
     //新增用户
     @Override
     public boolean insertUser(User user) {
         if (mapper.queryByUserNo(user.getUserNo()) == null) {
             ChatInfo chat = new ChatInfo();
-            user.setUserStatus(Activited);
+            user.setUserStatus(ConstantVariable.ACTIVE);
             chat.setUserNo(user.getUserNo());
-            chat.setContent("欢迎使用治账！快记点什么吧！");
+            chat.setContent(ConstantVariable.DEFAULT_CONTENT);
             chat.setIsMeSend(0);
             chat.setDatetime(DateTimeHandler.getCurrentDatetime());
             return mapper.insertUser(user) && historyMapper.insertByUser(chat);

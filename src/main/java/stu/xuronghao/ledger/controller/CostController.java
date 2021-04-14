@@ -8,6 +8,8 @@ import stu.xuronghao.ledger.service.CostService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
+import stu.xuronghao.ledger.utils.ConstantVariable;
+import stu.xuronghao.ledger.utils.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -23,7 +25,7 @@ public class CostController {
     //精确查找
     @GetMapping("/queryByCostNo")
     public String queryByCostNo(@RequestParam(value = "costNo") String costNo) {
-        log.info("Ready to query cost: " + costNo);
+        log.info(StringUtils.format(ConstantVariable.LOG_QUERY_BY_NO_NAME_TYPE, ConstantVariable.COST, costNo));
         Cost cost = costService.queryByCostNo(costNo);
         return JSON.toJSONString(cost, SerializerFeature.WriteClassName);
     }
@@ -31,7 +33,7 @@ public class CostController {
     //模糊查找
     @GetMapping("/queryByCostEvent")
     public String queryByCostEvent(@RequestParam(value = "costEvent") String costEvent) {
-        log.info("Ready to query cost by: " + costEvent);
+        log.info(StringUtils.format(ConstantVariable.LOG_QUERY_BY_NO_NAME_TYPE, ConstantVariable.COST, costEvent));
         List<Cost> costs = costService.queryByCostEvent(costEvent);
         return JSON.toJSONString(costs, SerializerFeature.WriteClassName);
     }
@@ -39,7 +41,7 @@ public class CostController {
     //类型查找
     @GetMapping("/queryByCostType")
     public String queryByCostType(@RequestParam(value = "costType") String costType) {
-        log.info("Ready to query cost by: " + costType);
+        log.info(StringUtils.format(ConstantVariable.LOG_QUERY_BY_NO_NAME_TYPE, ConstantVariable.COST, costType));
         List<Cost> costs = costService.queryByCostType(costType);
         return JSON.toJSONString(costs, SerializerFeature.WriteClassName);
     }
@@ -47,7 +49,7 @@ public class CostController {
     //按用户查找
     @GetMapping("/queryByCostUser")
     public String queryByCostUser(@RequestParam(value = "userNo") String userNo) {
-        log.info("Ready to query cost by: " + userNo);
+        log.info(StringUtils.format(ConstantVariable.LOG_QUERY_BY_NO_NAME_TYPE, ConstantVariable.COST, userNo));
         List<Cost> costs = costService.queryByCostUser(userNo);
         return JSON.toJSONString(costs, SerializerFeature.WriteClassName);
     }
@@ -57,7 +59,8 @@ public class CostController {
     public String queryByCostDate(@RequestParam(value = "beginDate") String beginDate,
                                   @RequestParam(value = "endDate") String endDate) {
         //注意！日期应只包含年月日，而不包含具体时间
-        log.info("Ready to query cost between + " + beginDate + " and " + endDate);
+        log.info(StringUtils.format(ConstantVariable.LOG_QUERY_BY_DATE_RANGE, ConstantVariable.COST,
+                beginDate, endDate));
         List<Cost> costs = costService.queryByCostDate(beginDate, endDate);
         return JSON.toJSONString(costs, SerializerFeature.WriteClassName);
     }
@@ -68,7 +71,8 @@ public class CostController {
                                         @RequestParam(value = "beginDate") String beginDate,
                                         @RequestParam(value = "endDate") String endDate) {
         //注意！日期应只包含年月日，而不包含具体时间
-        log.info("Ready to query cost between + " + beginDate + " and " + endDate + " Of " + userNo);
+        log.info(StringUtils.format(ConstantVariable.LOG_QUERY_BY_DATE_RANGE, ConstantVariable.COST,
+                beginDate, endDate));
         List<Cost> costs = costService.queryByCostDateOfUser(userNo, beginDate, endDate);
         return JSON.toJSONString(costs, SerializerFeature.WriteClassName);
     }
@@ -76,43 +80,43 @@ public class CostController {
     //全部查找
     @GetMapping("/queryAllCost")
     public String queryAllCost() {
-        log.info("Ready to query all cost!");
+        log.info(StringUtils.format(ConstantVariable.LOG_QUERY_ALL, ConstantVariable.COST));
         List<Cost> costs = costService.queryAllCost();
         return JSON.toJSONString(costs);
     }
 
     //插入
-    @PostMapping(value = "/insertCost", produces = "application/json;charset=UTF-8")
+    @PostMapping(value = "/insertCost", produces = ConstantVariable.REQUEST_PRODUCE)
     public boolean insertCost(@RequestBody String costJson) {
         Cost cost = JSON.parseObject(costJson, Cost.class);
-        log.info("Ready to insert cost: " + cost.toString());
+        log.info(StringUtils.format(ConstantVariable.LOG_INSERT, ConstantVariable.COST, cost.toString()));
         return costService.insertCost(cost);
     }
 
     //交互插入
-    @PostMapping(value = "/costChat", produces = "application/json;charset=UTF-8")
+    @PostMapping(value = "/costChat", produces = ConstantVariable.REQUEST_PRODUCE)
     public String costChat(@RequestBody String infoJson) {
-        String costJson = infoJson.split("<<->>")[0];
-        String chatJson = infoJson.split("<<->>")[1];
+        String[] temp = infoJson.split(ConstantVariable.SPLIT_STR);
+        String costJson = temp[0];
+        String chatJson = temp[1];
         Cost cost = JSON.parseObject(costJson, Cost.class);
         ChatInfo chat = JSON.parseObject(chatJson, ChatInfo.class);
         return JSON.toJSONString(costService.costChat(cost, chat), SerializerFeature.WriteClassName);
     }
 
     //更新
-    @PostMapping(value = "/updateCost", produces = "application/json;charset=UTF-8")
+    @PostMapping(value = "/updateCost", produces = ConstantVariable.REQUEST_PRODUCE)
     public boolean updateCost(@RequestBody String costJson) {
         Cost cost = JSON.parseObject(costJson, Cost.class);
-        log.info("Ready to update cost: " + cost.toString());
+        log.info(StringUtils.format(ConstantVariable.LOG_UPDATE, ConstantVariable.COST, cost.toString()));
         return costService.updateCost(cost);
     }
 
     //删除
-    @PostMapping(value = "/deleteCost", produces = "application/json;charset=UTF-8")
+    @PostMapping(value = "/deleteCost", produces = ConstantVariable.REQUEST_PRODUCE)
     public boolean deleteCost(@RequestBody String costJson) {
         Cost cost = JSON.parseObject(costJson, Cost.class);
-        log.warn("Ready to delete cost: " + cost.toString());
+        log.warn(StringUtils.format(ConstantVariable.LOG_DELETE, ConstantVariable.COST, cost.toString()));
         return costService.deleteCost(cost);
     }
-
 }
