@@ -17,6 +17,13 @@ public class User {
         this.userPasswd = userPasswd;
     }
 
+
+    public User(String userNo, String userName, String userPasswd) {
+        this.userNo = userNo;
+        this.userName = userName;
+        this.userPasswd = userPasswd;
+    }
+
     //删除
     public User(String userNo) {
         this.userNo = userNo;

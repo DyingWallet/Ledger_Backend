@@ -4,8 +4,8 @@ public class Sentence {
     private int sentenceId;
     private String content;
 
-    public Sentence(int senId, String content) {
-        sentenceId = senId;
+    public Sentence(int sentenceId, String content) {
+        this.sentenceId = sentenceId;
         this.content = content;
     }
 
