@@ -4,7 +4,8 @@ public class User {
     private String userNo;
     private String userName;
     private String userPasswd;
-    private String storage;
+    private String userStorage;
+    private double userBudget;
     private int userStatus;
     private int userCredits;
 
@@ -53,12 +54,20 @@ public class User {
         this.userPasswd = userPasswd;
     }
 
-    public String getStorage() {
-        return storage;
+    public String getUserStorage() {
+        return userStorage;
     }
 
-    public void setStorage(String storage) {
-        this.storage = storage;
+    public void setUserStorage(String userStorage) {
+        this.userStorage = userStorage;
+    }
+
+    public double getUserBudget() {
+        return userBudget;
+    }
+
+    public void setUserBudget(double userBudget) {
+        this.userBudget = userBudget;
     }
 
     public int getUserStatus() {

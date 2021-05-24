@@ -25,4 +25,13 @@ public interface UserService {
 
     //新增用户
     boolean insertUser(User user);
+
+    //更新预算
+    boolean changeUserBudget(User user);
+
+    //更新用户信息
+    boolean updateUserInfo(User user);
+
+    //获取用户信息
+    User getUserInfo(User user);
 }

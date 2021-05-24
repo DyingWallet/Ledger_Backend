@@ -1,28 +1,62 @@
-11:31:29.002 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Starting LedgerApplication on DYINGWALLET with PID 24940 (E:\Outputs\Java\IDEA Projects\ledger_backend\target\classes started by 70903 in E:\Outputs\Java\IDEA Projects\ledger_backend)
-11:31:29.011 [main] INFO  stu.xuronghao.ledger.LedgerApplication - No active profile set, falling back to default profiles: default
-11:31:29.994 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
-11:31:29.995 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-11:31:29.996 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
-11:31:29.998 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
-11:31:29.998 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-11:31:29.998 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-11:31:30.002 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
-11:31:30.078 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-11:31:30.752 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-11:31:30.825 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
-11:31:30.851 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Started LedgerApplication in 2.408 seconds (JVM running for 3.47)
-11:31:39.343 [http-nio-8090-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-11:31:39.367 [http-nio-8090-exec-1] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
-11:31:39.381 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-11:31:39.491 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-11:31:39.693 [http-nio-8090-exec-2] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
-11:31:44.566 [http-nio-8090-exec-4] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 00:00:00 and 2021-05-31 24:00:00
-11:31:44.822 [http-nio-8090-exec-3] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-01-01 and 2021-12-31
-11:31:44.830 [http-nio-8090-exec-5] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income between 2021-01-01 and 2021-12-31
-11:31:52.288 [http-nio-8090-exec-6] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
-11:31:52.317 [http-nio-8090-exec-7] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
-11:31:54.320 [http-nio-8090-exec-8] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 00:00:00 and 2021-05-31 24:00:00
-11:31:54.361 [http-nio-8090-exec-9] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-01-01 and 2021-12-31
-11:31:54.369 [http-nio-8090-exec-10] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income between 2021-01-01 and 2021-12-31
-11:31:55.320 [http-nio-8090-exec-1] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
-11:31:55.339 [http-nio-8090-exec-2] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
+17:31:04.489 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Starting LedgerApplication on DYINGWALLET with PID 10656 (E:\Outputs\Java\IDEA Projects\ledger_backend\target\classes started by 70903 in E:\Outputs\Java\IDEA Projects\ledger_backend)
+17:31:04.510 [main] INFO  stu.xuronghao.ledger.LedgerApplication - No active profile set, falling back to default profiles: default
+17:31:06.566 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+17:31:06.566 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+17:31:06.567 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+17:31:06.568 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+17:31:06.569 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+17:31:06.569 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+17:31:06.641 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+17:31:06.761 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:31:07.911 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+17:31:08.024 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+17:31:08.054 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Started LedgerApplication in 4.389 seconds (JVM running for 6.43)
+17:31:48.041 [http-nio-8090-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:31:48.153 [http-nio-8090-exec-1] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
+17:31:48.174 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+17:31:48.350 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+17:31:48.475 [http-nio-8090-exec-2] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:31:48.531 [http-nio-8090-exec-3] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:31:48.550 [http-nio-8090-exec-4] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
+17:33:09.095 [http-nio-8090-exec-6] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
+17:33:09.111 [http-nio-8090-exec-7] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:33:09.125 [http-nio-8090-exec-8] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:33:09.144 [http-nio-8090-exec-9] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
+17:34:02.288 [http-nio-8090-exec-10] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
+17:34:02.301 [http-nio-8090-exec-1] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:34:02.317 [http-nio-8090-exec-2] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:34:02.333 [http-nio-8090-exec-3] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
+17:34:04.345 [http-nio-8090-exec-4] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 17:34:03 00:00:00 and 2021-05-31 17:34:03 24:00:00
+17:34:04.388 [http-nio-8090-exec-5] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-01-01 and 2021-12-31
+17:34:04.402 [http-nio-8090-exec-6] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income between 2021-01-01 and 2021-12-31
+17:45:43.396 [http-nio-8090-exec-8] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
+17:45:43.428 [http-nio-8090-exec-9] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:45:43.442 [http-nio-8090-exec-10] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:45:43.458 [http-nio-8090-exec-1] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
+17:50:09.484 [http-nio-8090-exec-3] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
+17:50:09.515 [http-nio-8090-exec-4] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:50:09.529 [http-nio-8090-exec-5] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:50:09.549 [http-nio-8090-exec-6] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
+17:51:09.623 [http-nio-8090-exec-8] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
+17:51:09.660 [http-nio-8090-exec-9] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:51:09.678 [http-nio-8090-exec-10] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:51:09.699 [http-nio-8090-exec-1] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
+17:51:14.040 [http-nio-8090-exec-2] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 17:51:13 00:00:00 and 2021-05-31 17:51:13 24:00:00
+17:51:14.055 [http-nio-8090-exec-3] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-01-01 and 2021-12-31
+17:51:14.073 [http-nio-8090-exec-4] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income between 2021-01-01 and 2021-12-31
+17:51:16.999 [http-nio-8090-exec-5] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
+17:51:17.009 [http-nio-8090-exec-6] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:51:17.034 [http-nio-8090-exec-7] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:51:17.051 [http-nio-8090-exec-8] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
+17:51:19.627 [http-nio-8090-exec-9] INFO  stu.xuronghao.ledger.controller.AnnoController - Ready to query all Announcement
+17:51:32.601 [http-nio-8090-exec-10] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
+17:51:32.612 [http-nio-8090-exec-1] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:51:32.624 [http-nio-8090-exec-2] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:51:32.639 [http-nio-8090-exec-3] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
+17:51:36.643 [http-nio-8090-exec-4] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 17:51:36 00:00:00 and 2021-05-31 17:51:36 24:00:00
+17:51:36.667 [http-nio-8090-exec-5] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-01-01 and 2021-12-31
+17:51:36.680 [http-nio-8090-exec-6] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income between 2021-01-01 and 2021-12-31
+17:51:37.372 [http-nio-8090-exec-7] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
+17:51:37.383 [http-nio-8090-exec-8] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:51:37.395 [http-nio-8090-exec-9] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
+17:51:37.415 [http-nio-8090-exec-10] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com

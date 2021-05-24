@@ -10,6 +10,8 @@
         <result column="userPasswd" property="userPasswd"/>
         <result column="userStatus" property="userStatus"/>
         <result column="userCredits" property="userCredits"/>
+        <result column="userStorage" property="userStorage"/>
+        <result column="userBudget" property="userBudget"/>
     </resultMap>
 
     <!--精确查询-->
@@ -48,6 +50,21 @@
     <update id="changeUserPasswd" parameterType="stu.xuronghao.ledger.entity.User">
         update User_T
         set userPasswd = #{userPasswd}
+        where userNo = #{userNo}
+    </update>
+
+    <!--更新预算-->
+    <update id="changeUserBudget" parameterType="stu.xuronghao.ledger.entity.User">
+        update User_T
+        set userBudget = #{userBudget}
+        where userNo = #{userNo}
+    </update>
+
+    <!--更新用户信息-->
+    <update id="updateUserInfo" parameterType="stu.xuronghao.ledger.entity.User">
+        update User_T
+        set userName = #{userName},
+            userBudget = #{userBudget}
         where userNo = #{userNo}
     </update>
 

@@ -26,10 +26,14 @@ public interface UserMapper {
     //修改密码
     boolean changeUserPasswd(User user);
 
+    //更新预算
+    boolean changeUserBudget(User user);
+
     //注销用户
     boolean setUserStatus(String userNo, int userStatus);
 
     //删除用户
     boolean deleteUser(String userNo);
 
+    boolean updateUserInfo(User user);
 }

@@ -5,8 +5,8 @@
 <mapper namespace="stu.xuronghao.ledger.mapper.HistoryMapper">
     <resultMap id="chatInfo" type="stu.xuronghao.ledger.entity.ChatInfo">
         <result column="userNo" property="userNo"/>
-        <result column="hisDate" property="Datetime"/>
-        <result column="hisContent" property="Content"/>
+        <result column="hisDate" property="datetime"/>
+        <result column="hisContent" property="content"/>
         <result column="isMeSend" property="isMeSend"/>
     </resultMap>
 
@@ -16,7 +16,7 @@
     </select>
 
     <insert id="insertByUser" parameterType="stu.xuronghao.ledger.entity.ChatInfo">
-        insert into History_T (userNo, hisDate, hisContent, isMeSend) VALUES (#{userNo},#{Datetime},#{Content},#{isMeSend})
+        insert into History_T (userNo, hisDate, hisContent, isMeSend) VALUES (#{userNo},#{datetime},#{content},#{isMeSend})
     </insert>
 
 

@@ -26,6 +26,9 @@ public class ConstantVariable {
     public static final String LOG_UPDATE = "Ready to update {0}: {1}";
     public static final String LOG_DELETE = "Ready to delete {0}: {1}";
     public static final String LOG_CHANGE_STATE = "Ready to change state {0}: {1}";
+    public static final String LOG_PASSWD = "password";
+    public static final String LOG_BUDGET = "budget";
+    public static final String LOG_USER_INFO = "info";
 
     //管理员相关
     //登录
@@ -62,10 +65,11 @@ public class ConstantVariable {
 
     public static final String LOG_SIGN_IN_USER = "Ready to SignUp user: {0}";
     public static final String LOG_CURRENT_USER = "{0} logged in";
-    public static final String LOG_CHANGE_PASSWD = "Ready to update passwd: {0}";
+    public static final String LOG_UPDATE_USER_INFO = "Ready to update {0}: {1}";
     public static final String LOG_FROZE_USER = "Ready to froze user: {0}";
     public static final String LOG_USER_HAS_BEEN_FROZEN = "User: {0} has been deleted";
     public static final String LOG_FROZE_USER_FAILED = "Failed to delete user: {0}";
+    public static final String LOG_GET_USER_INFO = "Ready to fetch user : {0}";
 
     //公告/反馈相关
     public static final String LOG_QUERY_BY_DATE_RANGE = "Ready to query {0} between {1} and {2}";

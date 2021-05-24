@@ -47,26 +47,51 @@ public class UserController {
 
     //用户注册
     @PostMapping(value = "/SignUp", produces = ConstantVariable.REQUEST_PRODUCE)
-    public boolean userSignUp(@RequestBody User user) {
-        log.info(StringUtils.format(ConstantVariable.LOG_SIGN_IN_USER, user.toString()));
+    public boolean userSignUp(@RequestBody String userJson) {
+        log.info(StringUtils.format(ConstantVariable.LOG_SIGN_IN_USER, userJson));
+        User user = JSON.parseObject(userJson,User.class);
         return userService.insertUser(user);
     }
 
     //用户登录
     @PostMapping(value = "/Login", produces = ConstantVariable.REQUEST_PRODUCE)
-    public User userLogin(@RequestBody User user) {
-
+    public String userLogin(@RequestBody String userJson) {
+        User user = JSON.parseObject(userJson,User.class);
         userService.UserLogin(user);
         log.info(StringUtils.format(ConstantVariable.LOG_CURRENT_USER, user.toString()));
-        return user;
+        return JSON.toJSONString(user, SerializerFeature.WriteClassName);
+    }
+
+    //获取用户信息
+    @PostMapping(value = "/getUserInfo",produces = ConstantVariable.REQUEST_PRODUCE)
+    public String getUserInfo(@RequestBody String userJson) {
+        User user = JSON.parseObject(userJson,User.class);
+        log.info(StringUtils.format(ConstantVariable.LOG_GET_USER_INFO,user.toString()));
+        return JSON.toJSONString(userService.getUserInfo(user), SerializerFeature.WriteClassName);
+    }
+
+    //更新用户信息
+    @PostMapping(value = "/updateUserInfo",produces = ConstantVariable.REQUEST_PRODUCE)
+    public boolean updateUserInfo(@RequestBody String userJson) {
+        User user = JSON.parseObject(userJson,User.class);
+        log.info(StringUtils.format(ConstantVariable.LOG_UPDATE_USER_INFO, ConstantVariable.LOG_USER_INFO, user.getUserNo()));
+        return userService.updateUserInfo(user);
     }
 
     //更改密码
     @PostMapping(value = "/changeUserPasswd", produces = ConstantVariable.REQUEST_PRODUCE)
     public boolean changeUserPasswd(@RequestBody String userJson) {
         User user = JSON.parseObject(userJson, User.class);
-        log.info(StringUtils.format(ConstantVariable.LOG_CHANGE_PASSWD, user.getUserNo()));
+        log.info(StringUtils.format(ConstantVariable.LOG_UPDATE_USER_INFO,ConstantVariable.LOG_PASSWD , user.getUserNo()));
         return userService.changeUserPasswd(user);
+    }
+
+    //更改预算
+    @PostMapping(value = "/changeUserBudget",produces = ConstantVariable.REQUEST_PRODUCE)
+    public boolean changeUserBudget(@RequestBody String userJson) {
+        User user = JSON.parseObject(userJson, User.class);
+        log.info(StringUtils.format(ConstantVariable.LOG_UPDATE_USER_INFO, ConstantVariable.LOG_BUDGET, user.getUserNo()));
+        return userService.changeUserBudget(user);
     }
 
     //用户删除

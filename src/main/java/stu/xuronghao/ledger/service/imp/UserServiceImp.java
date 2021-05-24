@@ -5,6 +5,7 @@ import stu.xuronghao.ledger.entity.User;
 import stu.xuronghao.ledger.mapper.HistoryMapper;
 import stu.xuronghao.ledger.mapper.UserMapper;
 import org.springframework.stereotype.Service;
+import stu.xuronghao.ledger.service.UserService;
 import stu.xuronghao.ledger.utils.ConstantVariable;
 import stu.xuronghao.ledger.utils.DateTimeHandler;
 
@@ -12,7 +13,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @Service
-public class UserServiceImp implements stu.xuronghao.ledger.service.UserService {
+public class UserServiceImp implements UserService {
     @Resource
     UserMapper mapper;
     @Resource
@@ -93,5 +94,21 @@ public class UserServiceImp implements stu.xuronghao.ledger.service.UserService 
             return mapper.insertUser(user) && historyMapper.insertByUser(chat);
         } else
             return false;
+    }
+
+    //更新预算
+    @Override
+    public boolean changeUserBudget(User user){
+        return mapper.changeUserBudget(user);
+    }
+
+    @Override
+    public boolean updateUserInfo(User user) {
+        return mapper.updateUserInfo(user);
+    }
+
+    @Override
+    public User getUserInfo(User user) {
+        return mapper.queryByUserNo(user.getUserNo());
     }
 }
