@@ -25,7 +25,7 @@
     <select id="queryByUserName" resultMap="userQuery">
         select *
         from User_T
-        where userName like concat('%', '${userName}', '%')
+        where userName like concat('${userName}', '%')
     </select>
 
     <!--整表查询！！

@@ -25,7 +25,7 @@
     <select id="queryByCostEvent" resultMap="costQuery">
         select *
         from Cost_T
-        where costEvent like concat('%', '${costEvent}', '%')
+        where costEvent like concat('${costEvent}', '%')
         order by costDatetime DESC
     </select>
 

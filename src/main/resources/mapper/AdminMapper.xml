@@ -21,7 +21,7 @@
     <select id="queryByAdminName" resultMap="adminQuery">
         select *
         from Admin_T
-        where adminName like concat('%', '${adminName}', '%')
+        where adminName like concat('${adminName}', '%')
         order by adminNo
     </select>
 

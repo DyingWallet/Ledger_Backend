@@ -26,7 +26,7 @@
     <select id="queryByProName" resultMap="proQuery">
         select *
         from Products_T
-        where proName like concat('%', '${proName}', '%')
+        where proName like concat('${proName}', '%')
         order by proName
     </select>
 

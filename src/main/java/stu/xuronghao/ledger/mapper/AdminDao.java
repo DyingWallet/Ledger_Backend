@@ -19,7 +19,7 @@ public interface AdminDao {
     /**
      * query user by key
      */
-    @Select("select * from User_T where userName like concat('%',#{key},'%') or userNo like concat('%',#{key},'%')")
+    @Select("select * from User_T where userName like concat(#{key},'%') or userNo like concat(#{key},'%')")
     List<User> findUserByKey(@Param("key") String Key);
 
     /**
@@ -45,7 +45,7 @@ public interface AdminDao {
     /**
      * query announce
      */
-    @Select("select * from Announce_T where annoContent like concat('%',#{key},'%') order by annoDate desc")
+    @Select("select * from Announce_T where annoContent like concat(#{key},'%') order by annoDate desc")
     List<Anno> queryAnnounce(@Param("key") String key);
 
     /**

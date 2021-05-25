@@ -24,7 +24,7 @@
     <select id="queryByIncEvent" resultMap="incQuery">
         select *
         from Income_T
-        where incEvent like concat('%', '${incEvent}', '%')
+        where incEvent like concat('${incEvent}', '%')
         order by incDatetime DESC
     </select>
 

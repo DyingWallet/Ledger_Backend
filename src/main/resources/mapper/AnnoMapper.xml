@@ -23,7 +23,7 @@
     <select id="queryByAnnoTitle" resultMap="annoQuery">
         select *
         from Announce_T
-        where annoTitle like concat('%', '${annoTitle}', '%')
+        where annoTitle like concat('${annoTitle}', '%')
         order by annoDate DESC
     </select>
 

@@ -25,7 +25,7 @@
     <select id="queryByTitle" resultMap="fbQuery">
         select *
         from Feedback_T
-        where fbTitle like concat('%', '${fbTitle}', '%')
+        where fbTitle like concat('${fbTitle}', '%')
         order by fbDate DESC
     </select>
 
