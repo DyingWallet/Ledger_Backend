@@ -49,10 +49,11 @@
                             <td th:text = "${feedback['fbNo']}">fbNo</td>
                             <td th:text = "${feedback['fbTitle']}">fbTitle</td>
                             <td th:text = "${feedback['fbType']}">fbType</td>
-                            <td th:text = "${feedback['fbContent']}">fbContent</td>
+                            <td th:text = "${feedback['fbContent']}" style=" word-break:break-all">fbContent</td>
                             <td th:text = "${feedback['fbDate']}">fbDate</td>
                             <td th:text = "${feedback['userNo']}">userNo</td>
-                            <td th:text = "${feedback['fbRead']}">fbRead</td>
+                            <td th:if = "${feedback['fbRead']} == 0">否</td>
+                            <td th:if = "${feedback['fbRead']} == 1">是</td>
                             <td th:if = "${feedback['fbRead']} == 0" style="border: none"><button class="btn btn-default fbRead"  th:id = "${feedback['fbNo']}" style="background-color: gainsboro" >处理</button></td>
                             <td th:if = "${feedback['fbRead']} == 1" style="border: none"><button class="btn btn-default fbRead"  th:id = "${feedback['fbNo']}" style="background-color: gainsboro" >已处理</button></td>
                         </tr>
