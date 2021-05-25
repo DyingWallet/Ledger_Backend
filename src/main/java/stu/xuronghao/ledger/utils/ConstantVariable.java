@@ -33,6 +33,7 @@ public class ConstantVariable {
     //管理员相关
     //登录
     public static final String LOGIN_PAGE = "login";
+    public static final String ADMIN_LOGIN = "adminLogin";
     //主页
     public static final String HOME_PAGE = "home";
     //反馈

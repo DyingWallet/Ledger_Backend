@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
-@RequestMapping("/admin")
+@RequestMapping("/Admin")
 public class AdminController {
     public static final Logger log = LoggerFactory.getLogger(AdminController.class);
 
@@ -154,7 +154,7 @@ public class AdminController {
      * @param session
      * @return
      */
-    @RequestMapping("/adminlogin")
+    @RequestMapping("/adminLogin")
     public String adminLogin(HttpServletRequest request, HttpSession session) {
         String id = request.getParameter("adminId");
         String password = request.getParameter("password");

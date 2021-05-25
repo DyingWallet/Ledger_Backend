@@ -40,7 +40,7 @@ public interface AdminDao {
      * delete an announce
      */
     @Delete("delete from Announce_T where annoNo = #{annoNo}")
-    void dateleAnnounce(@Param("annoNo") String annoNo);
+    void deleteAnnounce(@Param("annoNo") String annoNo);
 
     /**
      * query announce
@@ -75,7 +75,7 @@ public interface AdminDao {
     /**
      * revocationAnnounce
      */
-    @Update("update Announce_T set annoType = 1 where annoNo = #{annoNo}")
+    @Update("update Announce_T set annoType = 0 where annoNo = #{annoNo}")
     void revocationAnnounce(@Param("annoNo") String id);
 
 

@@ -1,17 +1,25 @@
-18:32:17.720 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Starting LedgerApplication on DYINGWALLET with PID 27376 (E:\Outputs\Java\IDEA Projects\ledger_backend\target\classes started by 70903 in E:\Outputs\Java\IDEA Projects\ledger_backend)
-18:32:17.727 [main] INFO  stu.xuronghao.ledger.LedgerApplication - No active profile set, falling back to default profiles: default
-18:32:18.766 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
-18:32:18.767 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-18:32:18.767 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
-18:32:18.769 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
-18:32:18.769 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-18:32:18.769 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-18:32:18.772 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
-18:32:18.851 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-18:32:19.509 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-18:32:19.586 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
-18:32:19.614 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Started LedgerApplication in 2.444 seconds (JVM running for 4.383)
-18:32:24.360 [http-nio-8090-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-18:32:29.190 [http-nio-8090-exec-5] INFO  stu.xuronghao.ledger.controller.AdminController - id = 001; passwd = 123456
-18:32:29.205 [http-nio-8090-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-18:32:29.317 [http-nio-8090-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+00:59:50.609 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Starting LedgerApplication on DYINGWALLET with PID 8440 (E:\Outputs\Java\IDEA Projects\ledger_backend\target\classes started by 70903 in E:\Outputs\Java\IDEA Projects\ledger_backend)
+00:59:50.617 [main] INFO  stu.xuronghao.ledger.LedgerApplication - No active profile set, falling back to default profiles: default
+00:59:52.441 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+00:59:52.442 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+00:59:52.442 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+00:59:52.443 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+00:59:52.444 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+00:59:52.444 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+00:59:52.457 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+00:59:52.577 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:59:53.572 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+00:59:53.742 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+00:59:53.799 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Started LedgerApplication in 3.926 seconds (JVM running for 7.935)
+00:59:54.001 [http-nio-8090-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:59:59.952 [http-nio-8090-exec-4] INFO  stu.xuronghao.ledger.controller.AdminController - id = 001; passwd = 123456
+00:59:59.977 [http-nio-8090-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+01:00:00.117 [http-nio-8090-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+01:00:25.993 [http-nio-8090-exec-9] INFO  stu.xuronghao.ledger.controller.AdminController - 测试 + 
+ + 1 + 
+ + 这是一条测试公告 + 
+ + 2021-05-26 01:00:25
+01:00:36.089 [http-nio-8090-exec-1] INFO  stu.xuronghao.ledger.controller.AdminController - 这是一条测试公告 + 
+ + 1 + 
+ + 这是一条测试公告！ + 
+ + 2021-05-26 01:00:36

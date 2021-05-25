@@ -12,6 +12,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </head>
+
+<style type="text/css">
+    .middle_td {
+        vertical-align: middle!important;
+        white-space: nowrap;
+    }
+
+    .middle_td_content{
+        vertical-align: middle!important;
+        word-break:break-all;
+    }
+</style>
+
 <body>
 <div class="container-fluid" >
     <div th:replace="index::my-header"/>
@@ -33,12 +46,12 @@
             <br/>
 <!--            <div class="row">-->
 <!--                <div class="col-md-4 column">-->
-<!--                    <a class="btn btn-primary" href="${pageContext.request.contextPath}/admin/toAddUser">新增</a>-->
+<!--                    <a class="btn btn-primary" href="${pageContext.request.contextPath}/Admin/toAddUser">新增</a>-->
 <!--                </div>-->
 <!--            </div>-->
             <div class="row">
                 <div class="col-4">
-                    <form id = "query_user" method="POST" action = "/admin/queryByKey">
+                    <form id = "query_user" method="POST" action = "/Admin/queryByKey">
                         <div class="input-group" >
                             <span class="input-group-addon" id="basic-addon1"></span>
                             <input type="text" class="form-control" placeholder="请输入账号或者用户名" aria-describedby="basic-addon1" name = "key">
@@ -56,20 +69,20 @@
 
                             <thead>
                             <tr>
-                                <th>账号</th>
-                                <th>用户名</th>
-                                <th>积分</th>
-                                <th>操作</th>
+                                <th class="middle_td">账号</th>
+                                <th class="middle_td">用户名</th>
+                                <th class="middle_td">积分</th>
+                                <th class="middle_td">操作</th>
                             </tr>
                             </thead>
 
                                 <tbody>
                                 <tr th:each="user : ${list}">
-                                        <td th:text = "${user['userNo']}" name = "id" >id</td>
-                                        <td th:text = "${user['userName']}">name</td>
-                                        <td th:text = "${user['userCredits']}">credits</td>
-                                        <td th:if = "${user['userStatus']} == 1" style="border: none"><button class="btn btn-default changeUser"  th:id = "${user['userNo']}" style="background-color: gainsboro" >冻结</button></td>
-                                        <td th:if = "${user['userStatus']} == 0" style="border: none"><button class="btn btn-default changeUser"  th:id = "${user['userNo']}" style="background-color: gainsboro" >解冻</button></td>
+                                        <td th:text = "${user['userNo']}" name = "id"  class="middle_td">id</td>
+                                        <td th:text = "${user['userName']}" class="middle_td">name</td>
+                                        <td th:text = "${user['userCredits']}" class="middle_td">credits</td>
+                                        <td th:if = "${user['userStatus']} == 1" style="border: none" class="middle_td"><button class="btn btn-default changeUser"  th:id = "${user['userNo']}" style="background-color: gainsboro" >冻结</button></td>
+                                        <td th:if = "${user['userStatus']} == 0" style="border: none" class="middle_td"><button class="btn btn-default changeUser"  th:id = "${user['userNo']}" style="background-color: gainsboro" >解冻</button></td>
                                 </tr>
                                 </tbody>
 
@@ -99,7 +112,7 @@
         // alert(id)
         $.ajax({
             "async" : false,
-            "url" : "/admin/changeUserStatus",
+            "url" : "/Admin/changeUserStatus",
             "type" : "POST",
             "data" : {"id":id},
             "success":function (data) {

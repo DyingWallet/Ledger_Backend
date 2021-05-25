@@ -24,6 +24,8 @@ public interface AdminService {
 
     void revocationAnnounce(String id);
 
+     void deleteAnnounce(String id);
+
     Admin login(String id, String password);
 
     void adminUpdatePasswd(String newPasswd, String adminNo);

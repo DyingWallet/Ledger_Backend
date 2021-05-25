@@ -32,7 +32,7 @@
                         <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#UpdatePassword">修改密码</a>
                         <div class="dropdown-divider">
                         </div>
-                        <a class="dropdown-item logout" href="/admin/logout" >注&nbsp;&nbsp;&nbsp;&nbsp;销</a>
+                        <a class="dropdown-item logout" href="/Admin/logout" >注&nbsp;&nbsp;&nbsp;&nbsp;销</a>
                     </div>
                 </li>
             </ul>
@@ -54,11 +54,11 @@
 
                     <div class="nav flex-column nav-pills menu-myset text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 
-                        <a class="nav-link" id="v-pills-home-tab"  th:style="${index}==0?'color: #fff;background-color: #007bff':''"  th:href="@{/admin/home}" role="tab" >主&nbsp;&nbsp;&nbsp;&nbsp;页</a>
-                        <a class="nav-link" id="v-pills-query-tab" th:style="${index}==1?'color: #fff;background-color: #007bff':''" th:href="@{/admin/query}" role="tab" >查&nbsp;&nbsp;&nbsp;&nbsp;询</a>
-                        <a class="nav-link" id="v-pills-announce-tab" th:style="${index}==2?'color: #fff;background-color: #007bff':''" th:href="@{/admin/announce}" role="tab" >公告管理</a>
-                        <a class="nav-link" id="v-pills-feedback-tab" th:style="${index}==3?'color: #fff;background-color: #007bff':''" th:href="@{/admin/feedback}" role="tab"  >用户反馈</a>
-<!--                        <a class="nav-link" id="v-pills-products-tab" th:style="${index}==4?'color: #fff;background-color: #007bff':''" th:href="@{/admin/products}" role="tab"  >商品管理</a>-->
+                        <a class="nav-link" id="v-pills-home-tab"  th:style="${index}==0?'color: #fff;background-color: #007bff':''"  th:href="@{/Admin/home}" role="tab" >主&nbsp;&nbsp;&nbsp;&nbsp;页</a>
+                        <a class="nav-link" id="v-pills-query-tab" th:style="${index}==1?'color: #fff;background-color: #007bff':''" th:href="@{/Admin/query}" role="tab" >查&nbsp;&nbsp;&nbsp;&nbsp;询</a>
+                        <a class="nav-link" id="v-pills-announce-tab" th:style="${index}==2?'color: #fff;background-color: #007bff':''" th:href="@{/Admin/announce}" role="tab" >公告管理</a>
+                        <a class="nav-link" id="v-pills-feedback-tab" th:style="${index}==3?'color: #fff;background-color: #007bff':''" th:href="@{/Admin/feedback}" role="tab"  >用户反馈</a>
+<!--                        <a class="nav-link" id="v-pills-products-tab" th:style="${index}==4?'color: #fff;background-color: #007bff':''" th:href="@{/Admin/products}" role="tab"  >商品管理</a>-->
                     </div>
 
                 </div>
@@ -87,7 +87,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
-                <form id="admin_update" method="post" action="/admin/updatePassword">
+                <form id="admin_update" method="post" action="/Admin/updatePassword">
                     <div class="form-group">
                         <label  class="control-label">原密码:</label>
                         <input type="password" name="oldpassword" class="form-control" id="oldpassword">

@@ -59,6 +59,11 @@ public class AdminServiceImp implements AdminService {
     }
 
     @Override
+    public void deleteAnnounce(String id){
+        dao.deleteAnnounce(id);
+    }
+
+    @Override
     public Admin login(String id, String password) {
         Admin admin = dao.adminLogin(id, password);
         return admin;

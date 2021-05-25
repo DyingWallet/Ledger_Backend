@@ -1,79 +1,55 @@
-00:00:08.141 [http-nio-8090-exec-1] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
-00:00:08.176 [http-nio-8090-exec-2] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 00:00:00 and 2021-05-31 24:00:00
-00:00:08.186 [http-nio-8090-exec-3] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
-00:00:08.201 [http-nio-8090-exec-4] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
-00:00:11.344 [http-nio-8090-exec-6] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
-00:00:11.352 [http-nio-8090-exec-7] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 00:00:00 and 2021-05-31 24:00:00
-00:00:11.362 [http-nio-8090-exec-8] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
-00:00:11.371 [http-nio-8090-exec-9] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
-00:03:39.676 [http-nio-8090-exec-1] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
-00:03:39.712 [http-nio-8090-exec-2] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 00:00:00 and 2021-05-31 24:00:00
-00:03:39.726 [http-nio-8090-exec-3] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
-00:03:39.744 [http-nio-8090-exec-4] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
-00:04:22.073 [http-nio-8090-exec-6] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
-00:04:22.110 [http-nio-8090-exec-7] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 00:00:00 and 2021-05-31 24:00:00
-00:04:22.128 [http-nio-8090-exec-8] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
-00:04:22.149 [http-nio-8090-exec-9] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
-00:08:38.892 [http-nio-8090-exec-1] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
-00:08:38.930 [http-nio-8090-exec-2] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 00:00:00 and 2021-05-31 24:00:00
-00:08:38.946 [http-nio-8090-exec-3] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
-00:08:38.962 [http-nio-8090-exec-4] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
-00:08:44.017 [http-nio-8090-exec-6] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
-00:08:44.027 [http-nio-8090-exec-7] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 00:00:00 and 2021-05-31 24:00:00
-00:08:44.041 [http-nio-8090-exec-8] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
-00:08:44.057 [http-nio-8090-exec-9] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
-15:03:02.003 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11h25m16s960ms587µs900ns).
-16:46:04.113 [http-nio-8090-exec-1] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
-16:46:04.143 [http-nio-8090-exec-2] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 00:00:00 and 2021-05-31 24:00:00
-16:46:04.159 [http-nio-8090-exec-3] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
-16:46:04.168 [http-nio-8090-exec-4] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
-16:46:14.796 [http-nio-8090-exec-5] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
-16:46:14.803 [http-nio-8090-exec-6] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 00:00:00 and 2021-05-31 24:00:00
-16:46:14.815 [http-nio-8090-exec-7] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
-16:46:14.827 [http-nio-8090-exec-8] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
-16:46:18.650 [http-nio-8090-exec-9] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 00:00:00 and 2021-05-31 24:00:00
-16:46:18.662 [http-nio-8090-exec-10] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-01-01 and 2021-12-31
-16:46:18.679 [http-nio-8090-exec-1] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income between 2021-01-01 and 2021-12-31
-16:46:22.577 [http-nio-8090-exec-2] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
-16:46:22.588 [http-nio-8090-exec-3] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 00:00:00 and 2021-05-31 24:00:00
-16:46:22.607 [http-nio-8090-exec-4] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
-16:46:22.617 [http-nio-8090-exec-5] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
-16:46:25.037 [http-nio-8090-exec-6] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 00:00:00 and 2021-05-31 24:00:00
-16:46:25.054 [http-nio-8090-exec-7] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-01-01 and 2021-12-31
-16:46:25.087 [http-nio-8090-exec-8] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income between 2021-01-01 and 2021-12-31
-16:46:35.172 [http-nio-8090-exec-9] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
-16:46:35.183 [http-nio-8090-exec-10] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 00:00:00 and 2021-05-31 24:00:00
-16:46:35.196 [http-nio-8090-exec-1] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
-16:46:35.206 [http-nio-8090-exec-2] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
-16:46:52.632 [http-nio-8090-exec-3] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
-16:46:55.754 [http-nio-8090-exec-4] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
-16:47:23.771 [http-nio-8090-exec-6] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
-16:47:23.780 [http-nio-8090-exec-7] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 00:00:00 and 2021-05-31 24:00:00
-16:47:23.790 [http-nio-8090-exec-8] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
-16:47:23.800 [http-nio-8090-exec-9] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
-16:53:58.327 [http-nio-8090-exec-1] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
-16:53:58.338 [http-nio-8090-exec-2] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 00:00:00 and 2021-05-31 24:00:00
-16:53:58.364 [http-nio-8090-exec-3] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
-16:53:58.394 [http-nio-8090-exec-4] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
-17:50:17.197 [http-nio-8090-exec-6] INFO  stu.xuronghao.ledger.controller.UserController - Ready to fetch user : User{userNo='dw@qq.com', userName='dww', userPasswd='123456', userStatus=1, userCredits=0}
-17:50:17.209 [http-nio-8090-exec-7] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost between 2021-05-01 00:00:00 and 2021-05-31 24:00:00
-17:50:17.223 [http-nio-8090-exec-8] INFO  stu.xuronghao.ledger.controller.CostController - Ready to query Cost: dw@qq.com
-17:50:17.239 [http-nio-8090-exec-9] INFO  stu.xuronghao.ledger.controller.IncomeController - Ready to query Income: dw@qq.com
-18:22:07.105 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Starting LedgerApplication on DYINGWALLET with PID 1824 (E:\Outputs\Java\IDEA Projects\ledger_backend\target\classes started by 70903 in E:\Outputs\Java\IDEA Projects\ledger_backend)
-18:22:07.113 [main] INFO  stu.xuronghao.ledger.LedgerApplication - No active profile set, falling back to default profiles: default
-18:22:08.982 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
-18:22:08.983 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-18:22:08.983 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
-18:22:08.985 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
-18:22:08.985 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-18:22:08.985 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-18:22:09.000 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
-18:22:09.074 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-18:22:09.842 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-18:22:09.930 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
-18:22:09.961 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Started LedgerApplication in 3.519 seconds (JVM running for 4.667)
-18:22:24.886 [http-nio-8090-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-18:22:25.258 [http-nio-8090-exec-1] ERROR org.thymeleaf.TemplateEngine - [THYMELEAF][http-nio-8090-exec-1] Exception processing template "index": Exception evaluating SpringEL expression: "session.admin['adminName']" (template: "index" - line 30, col 134)
+00:08:57.120 [http-nio-8090-exec-5] INFO  stu.xuronghao.ledger.controller.AdminController - id = 001; passwd = 
+00:09:02.424 [http-nio-8090-exec-8] INFO  stu.xuronghao.ledger.controller.AdminController - id = 001; passwd = 123456
+00:10:30.117 [http-nio-8090-exec-3] INFO  stu.xuronghao.ledger.controller.AdminController - 测试公告 + 
+ + 1 + 
+ + 注意！这是一条管理员为测试系统而发布的公告。 + 
+ + 2021-05-26 00:10:30
+00:11:28.814 [http-nio-8090-exec-4] INFO  stu.xuronghao.ledger.controller.AdminController - 123 + 
+ + 1 + 
+ + 123 + 
+ + 2021-05-26 00:11:28
+00:14:48.205 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Starting LedgerApplication on DYINGWALLET with PID 2036 (E:\Outputs\Java\IDEA Projects\ledger_backend\target\classes started by 70903 in E:\Outputs\Java\IDEA Projects\ledger_backend)
+00:14:48.217 [main] INFO  stu.xuronghao.ledger.LedgerApplication - No active profile set, falling back to default profiles: default
+00:14:49.338 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+00:14:49.339 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+00:14:49.339 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+00:14:49.341 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+00:14:49.341 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+00:14:49.341 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+00:14:49.345 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+00:14:49.446 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:14:50.441 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+00:14:50.640 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+00:14:50.681 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Started LedgerApplication in 3.066 seconds (JVM running for 4.194)
+00:18:18.272 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Starting LedgerApplication on DYINGWALLET with PID 24716 (E:\Outputs\Java\IDEA Projects\ledger_backend\target\classes started by 70903 in E:\Outputs\Java\IDEA Projects\ledger_backend)
+00:18:18.282 [main] INFO  stu.xuronghao.ledger.LedgerApplication - No active profile set, falling back to default profiles: default
+00:18:19.396 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+00:18:19.397 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+00:18:19.397 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+00:18:19.398 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+00:18:19.398 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+00:18:19.399 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+00:18:19.401 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+00:18:19.495 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:18:20.330 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+00:18:20.414 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+00:18:20.443 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Started LedgerApplication in 2.797 seconds (JVM running for 4.331)
+00:18:23.151 [http-nio-8090-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:19:22.882 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Starting LedgerApplication on DYINGWALLET with PID 26948 (E:\Outputs\Java\IDEA Projects\ledger_backend\target\classes started by 70903 in E:\Outputs\Java\IDEA Projects\ledger_backend)
+00:19:22.892 [main] INFO  stu.xuronghao.ledger.LedgerApplication - No active profile set, falling back to default profiles: default
+00:19:24.374 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+00:19:24.374 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+00:19:24.375 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+00:19:24.377 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+00:19:24.377 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+00:19:24.377 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+00:19:24.381 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+00:19:24.493 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:19:25.433 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+00:19:25.521 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+00:19:25.555 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Started LedgerApplication in 3.297 seconds (JVM running for 5.73)
+00:19:27.882 [http-nio-8090-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:19:43.307 [http-nio-8090-exec-2] ERROR org.thymeleaf.TemplateEngine - [THYMELEAF][http-nio-8090-exec-2] Exception processing template "index": Exception evaluating SpringEL expression: "session.admin['adminName']" (template: "index" - line 30, col 134)
 org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "session.admin['adminName']" (template: "index" - line 30, col 134)
 	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
 	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
@@ -142,7 +118,7 @@ Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1012E:
 	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337) ~[spring-expression-5.2.6.RELEASE.jar:5.2.6.RELEASE]
 	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
 	... 58 more
-18:22:25.273 [http-nio-8090-exec-1] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "session.admin['adminName']" (template: "index" - line 30, col 134)] with root cause
+00:19:43.417 [http-nio-8090-exec-2] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "session.admin['adminName']" (template: "index" - line 30, col 134)] with root cause
 org.springframework.expression.spel.SpelEvaluationException: EL1012E: Cannot index into a null value
 	at org.springframework.expression.spel.ast.Indexer.getValueRef(Indexer.java:145) ~[spring-expression-5.2.6.RELEASE.jar:5.2.6.RELEASE]
 	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:70) ~[spring-expression-5.2.6.RELEASE.jar:5.2.6.RELEASE]
@@ -208,40 +184,394 @@ org.springframework.expression.spel.SpelEvaluationException: EL1012E: Cannot ind
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_271]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.35.jar:9.0.35]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_271]
-18:25:09.087 [http-nio-8090-exec-1] INFO  stu.xuronghao.ledger.controller.AdminController - id = 001; passwd = 123456
-18:25:09.105 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-18:25:09.224 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-18:27:53.223 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Starting LedgerApplication on DYINGWALLET with PID 27012 (E:\Outputs\Java\IDEA Projects\ledger_backend\target\classes started by 70903 in E:\Outputs\Java\IDEA Projects\ledger_backend)
-18:27:53.233 [main] INFO  stu.xuronghao.ledger.LedgerApplication - No active profile set, falling back to default profiles: default
-18:27:54.236 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
-18:27:54.237 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-18:27:54.237 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
-18:27:54.238 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
-18:27:54.239 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-18:27:54.239 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-18:27:54.242 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
-18:27:54.315 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-18:27:54.987 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-18:27:55.066 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
-18:27:55.096 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Started LedgerApplication in 2.4 seconds (JVM running for 4.278)
-18:27:58.784 [http-nio-8090-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-18:28:03.964 [http-nio-8090-exec-3] INFO  stu.xuronghao.ledger.controller.AdminController - id = 001; passwd = 123456
-18:28:03.979 [http-nio-8090-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-18:28:04.089 [http-nio-8090-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-18:32:17.720 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Starting LedgerApplication on DYINGWALLET with PID 27376 (E:\Outputs\Java\IDEA Projects\ledger_backend\target\classes started by 70903 in E:\Outputs\Java\IDEA Projects\ledger_backend)
-18:32:17.727 [main] INFO  stu.xuronghao.ledger.LedgerApplication - No active profile set, falling back to default profiles: default
-18:32:18.766 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
-18:32:18.767 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-18:32:18.767 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
-18:32:18.769 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
-18:32:18.769 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-18:32:18.769 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-18:32:18.772 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
-18:32:18.851 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-18:32:19.509 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-18:32:19.586 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
-18:32:19.614 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Started LedgerApplication in 2.444 seconds (JVM running for 4.383)
-18:32:24.360 [http-nio-8090-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-18:32:29.190 [http-nio-8090-exec-5] INFO  stu.xuronghao.ledger.controller.AdminController - id = 001; passwd = 123456
-18:32:29.205 [http-nio-8090-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-18:32:29.317 [http-nio-8090-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+00:20:08.993 [http-nio-8090-exec-5] INFO  stu.xuronghao.ledger.controller.AdminController - id = 001; passwd = 123456
+00:20:09.018 [http-nio-8090-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+00:20:09.179 [http-nio-8090-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+00:20:47.671 [http-nio-8090-exec-5] INFO  stu.xuronghao.ledger.controller.AdminController - 1234 + 
+ + 1 + 
+ + 1234 + 
+ + 2021-05-26 00:20:47
+00:22:27.575 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m10s440ms771µs100ns).
+00:28:40.734 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+00:28:40.747 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+00:28:45.760 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Starting LedgerApplication on DYINGWALLET with PID 23472 (E:\Outputs\Java\IDEA Projects\ledger_backend\target\classes started by 70903 in E:\Outputs\Java\IDEA Projects\ledger_backend)
+00:28:45.767 [main] INFO  stu.xuronghao.ledger.LedgerApplication - No active profile set, falling back to default profiles: default
+00:28:46.838 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+00:28:46.838 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+00:28:46.838 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+00:28:46.840 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+00:28:46.840 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+00:28:46.840 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+00:28:46.843 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+00:28:46.943 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:28:47.649 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+00:28:47.736 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+00:28:47.767 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Started LedgerApplication in 2.688 seconds (JVM running for 3.894)
+00:28:49.922 [http-nio-8090-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:28:54.632 [http-nio-8090-exec-5] INFO  stu.xuronghao.ledger.controller.AdminController - id = 001; passwd = 123456
+00:28:54.647 [http-nio-8090-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+00:28:54.762 [http-nio-8090-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+00:36:35.817 [http-nio-8090-exec-3] INFO  stu.xuronghao.ledger.controller.AdminController - id = 001; passwd = 123456
+00:39:14.951 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Starting LedgerApplication on DYINGWALLET with PID 25248 (E:\Outputs\Java\IDEA Projects\ledger_backend\target\classes started by 70903 in E:\Outputs\Java\IDEA Projects\ledger_backend)
+00:39:14.960 [main] INFO  stu.xuronghao.ledger.LedgerApplication - No active profile set, falling back to default profiles: default
+00:39:16.079 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+00:39:16.080 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+00:39:16.080 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+00:39:16.082 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+00:39:16.082 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+00:39:16.083 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+00:39:16.086 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+00:39:16.189 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:39:16.973 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+00:39:17.107 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+00:39:17.142 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Started LedgerApplication in 2.875 seconds (JVM running for 4.137)
+00:39:19.144 [http-nio-8090-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:40:40.039 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Starting LedgerApplication on DYINGWALLET with PID 9736 (E:\Outputs\Java\IDEA Projects\ledger_backend\target\classes started by 70903 in E:\Outputs\Java\IDEA Projects\ledger_backend)
+00:40:40.054 [main] INFO  stu.xuronghao.ledger.LedgerApplication - No active profile set, falling back to default profiles: default
+00:40:41.070 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+00:40:41.071 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+00:40:41.071 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+00:40:41.072 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+00:40:41.073 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+00:40:41.073 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+00:40:41.075 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+00:40:41.168 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:40:41.836 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+00:40:41.914 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+00:40:41.944 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Started LedgerApplication in 2.646 seconds (JVM running for 3.749)
+00:40:48.118 [http-nio-8090-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:41:57.161 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Starting LedgerApplication on DYINGWALLET with PID 11496 (E:\Outputs\Java\IDEA Projects\ledger_backend\target\classes started by 70903 in E:\Outputs\Java\IDEA Projects\ledger_backend)
+00:41:57.170 [main] INFO  stu.xuronghao.ledger.LedgerApplication - No active profile set, falling back to default profiles: default
+00:41:58.273 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+00:41:58.274 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+00:41:58.274 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+00:41:58.275 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+00:41:58.275 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+00:41:58.276 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+00:41:58.278 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+00:41:58.380 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:41:59.055 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+00:41:59.134 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+00:41:59.163 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Started LedgerApplication in 2.581 seconds (JVM running for 3.683)
+00:42:03.418 [http-nio-8090-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:43:16.286 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Starting LedgerApplication on DYINGWALLET with PID 26572 (E:\Outputs\Java\IDEA Projects\ledger_backend\target\classes started by 70903 in E:\Outputs\Java\IDEA Projects\ledger_backend)
+00:43:16.297 [main] INFO  stu.xuronghao.ledger.LedgerApplication - No active profile set, falling back to default profiles: default
+00:43:17.388 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+00:43:17.389 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+00:43:17.389 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+00:43:17.390 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+00:43:17.391 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+00:43:17.391 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+00:43:17.394 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+00:43:17.489 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:43:18.155 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+00:43:18.255 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+00:43:18.285 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Started LedgerApplication in 2.81 seconds (JVM running for 4.414)
+00:43:20.156 [http-nio-8090-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:43:25.664 [http-nio-8090-exec-3] INFO  stu.xuronghao.ledger.controller.AdminController - id = 001; passwd = 123456
+00:43:25.679 [http-nio-8090-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+00:43:25.790 [http-nio-8090-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+00:43:50.718 [http-nio-8090-exec-10] INFO  stu.xuronghao.ledger.controller.AdminController - 测试 + 
+ + 1 + 
+ + 这是一条测试公告！ + 
+ + 2021-05-26 00:43:50
+00:43:56.289 [http-nio-8090-exec-10] WARN  com.zaxxer.hikari.pool.ProxyConnection - HikariPool-1 - Connection com.mysql.cj.jdbc.ConnectionImpl@61360e42 marked as broken because of SQLSTATE(08S01), ErrorCode(0)
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5,567 milliseconds ago. The last packet sent successfully to the server was 5,567 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) [HikariCP-3.4.5.jar:?]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184) [mybatis-3.5.3.jar:3.5.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_271]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_271]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_271]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_271]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) [mybatis-spring-2.0.3.jar:2.0.3]
+	at com.sun.proxy.$Proxy73.insert(Unknown Source) [?:?]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271) [mybatis-spring-2.0.3.jar:2.0.3]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93) [mybatis-3.5.3.jar:3.5.3]
+	at com.sun.proxy.$Proxy79.insertAnnounce(Unknown Source) [?:?]
+	at stu.xuronghao.ledger.service.imp.AdminServiceImp.postAnnounce(AdminServiceImp.java:80) [classes/:?]
+	at stu.xuronghao.ledger.controller.AdminController.postAnnounce(AdminController.java:222) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_271]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_271]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_271]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_271]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at stu.xuronghao.ledger.controller.filter.AdminLoginFilter.doFilter(AdminLoginFilter.java:32) [classes/:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_271]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_271]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_271]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5,567 milliseconds ago. The last packet sent successfully to the server was 5,567 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_271]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_271]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_271]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_271]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:538) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:702) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:641) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:940) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1075) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:930) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	... 75 more
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210) ~[?:1.8.0_271]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_271]
+	at com.mysql.cj.protocol.ReadAheadInputStream.fill(ReadAheadInputStream.java:107) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:150) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.ReadAheadInputStream.read(ReadAheadInputStream.java:180) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at java.io.FilterInputStream.read(FilterInputStream.java:133) ~[?:1.8.0_271]
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:532) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:702) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:641) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:940) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1075) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:930) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	... 75 more
+00:43:56.377 [http-nio-8090-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@11bedcce (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+00:43:56.379 [http-nio-8090-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@765f79b8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+00:43:56.381 [http-nio-8090-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7f723b43 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+00:43:56.383 [http-nio-8090-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5ce255ad (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+00:43:56.385 [http-nio-8090-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3bddba53 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+00:43:56.387 [http-nio-8090-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@36c28629 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+00:43:56.388 [http-nio-8090-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@58040b91 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+00:43:56.390 [http-nio-8090-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@40dc4da0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+00:43:56.391 [http-nio-8090-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@620d685c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+00:44:26.405 [http-nio-8090-exec-10] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.RecoverableDataAccessException: 
+### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5,567 milliseconds ago. The last packet sent successfully to the server was 5,567 milliseconds ago.
+### The error may exist in stu/xuronghao/ledger/mapper/AdminDao.java (best guess)
+### The error may involve stu.xuronghao.ledger.mapper.AdminDao.insertAnnounce-Inline
+### The error occurred while setting parameters
+### SQL: insert into Announce_T values(?,?,?,?,?,?)
+### Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5,567 milliseconds ago. The last packet sent successfully to the server was 5,567 milliseconds ago.
+; Communications link failure
+
+The last packet successfully received from the server was 5,567 milliseconds ago. The last packet sent successfully to the server was 5,567 milliseconds ago.; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5,567 milliseconds ago. The last packet sent successfully to the server was 5,567 milliseconds ago.] with root cause
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210) ~[?:1.8.0_271]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_271]
+	at com.mysql.cj.protocol.ReadAheadInputStream.fill(ReadAheadInputStream.java:107) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:150) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.ReadAheadInputStream.read(ReadAheadInputStream.java:180) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at java.io.FilterInputStream.read(FilterInputStream.java:133) ~[?:1.8.0_271]
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:532) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:702) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:641) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:940) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1075) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:930) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-3.4.5.jar:?]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184) ~[mybatis-3.5.3.jar:3.5.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_271]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_271]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_271]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_271]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at com.sun.proxy.$Proxy73.insert(Unknown Source) ~[?:?]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271) ~[mybatis-spring-2.0.3.jar:2.0.3]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) ~[mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93) ~[mybatis-3.5.3.jar:3.5.3]
+	at com.sun.proxy.$Proxy79.insertAnnounce(Unknown Source) ~[?:?]
+	at stu.xuronghao.ledger.service.imp.AdminServiceImp.postAnnounce(AdminServiceImp.java:80) ~[classes/:?]
+	at stu.xuronghao.ledger.controller.AdminController.postAnnounce(AdminController.java:222) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_271]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_271]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_271]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_271]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at stu.xuronghao.ledger.controller.filter.AdminLoginFilter.doFilter(AdminLoginFilter.java:32) ~[classes/:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_271]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_271]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_271]
+00:44:29.221 [http-nio-8090-exec-1] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30000ms.
+### The error may exist in stu/xuronghao/ledger/mapper/AdminDao.java (best guess)
+### The error may involve stu.xuronghao.ledger.mapper.AdminDao.queryAnnounce
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30000ms.] with root cause
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_271]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81) ~[?:1.8.0_271]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476) ~[?:1.8.0_271]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218) ~[?:1.8.0_271]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200) ~[?:1.8.0_271]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162) ~[?:1.8.0_271]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394) ~[?:1.8.0_271]
+	at java.net.Socket.connect(Socket.java:606) ~[?:1.8.0_271]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:725) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:711) ~[HikariCP-3.4.5.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_271]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[?:1.8.0_271]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[?:1.8.0_271]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_271]
+00:59:50.609 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Starting LedgerApplication on DYINGWALLET with PID 8440 (E:\Outputs\Java\IDEA Projects\ledger_backend\target\classes started by 70903 in E:\Outputs\Java\IDEA Projects\ledger_backend)
+00:59:50.617 [main] INFO  stu.xuronghao.ledger.LedgerApplication - No active profile set, falling back to default profiles: default
+00:59:52.441 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+00:59:52.442 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+00:59:52.442 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+00:59:52.443 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+00:59:52.444 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+00:59:52.444 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+00:59:52.457 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+00:59:52.577 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:59:53.572 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+00:59:53.742 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+00:59:53.799 [main] INFO  stu.xuronghao.ledger.LedgerApplication - Started LedgerApplication in 3.926 seconds (JVM running for 7.935)
+00:59:54.001 [http-nio-8090-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:59:59.952 [http-nio-8090-exec-4] INFO  stu.xuronghao.ledger.controller.AdminController - id = 001; passwd = 123456
+00:59:59.977 [http-nio-8090-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+01:00:00.117 [http-nio-8090-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+01:00:25.993 [http-nio-8090-exec-9] INFO  stu.xuronghao.ledger.controller.AdminController - 测试 + 
+ + 1 + 
+ + 这是一条测试公告 + 
+ + 2021-05-26 01:00:25
+01:00:36.089 [http-nio-8090-exec-1] INFO  stu.xuronghao.ledger.controller.AdminController - 这是一条测试公告 + 
+ + 1 + 
+ + 这是一条测试公告！ + 
+ + 2021-05-26 01:00:36

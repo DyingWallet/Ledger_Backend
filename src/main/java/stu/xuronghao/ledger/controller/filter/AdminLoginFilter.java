@@ -1,5 +1,7 @@
 package stu.xuronghao.ledger.controller.filter;
 
+import stu.xuronghao.ledger.utils.ConstantVariable;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -10,7 +12,7 @@ import java.io.IOException;
 
 //@ServletComponentScan
 //@Component("securityRequestFilter")
-@WebFilter(urlPatterns = "/admin/*", filterName = "securityRequestFilter")
+@WebFilter(urlPatterns = "/Admin/*", filterName = "securityRequestFilter")
 
 public class AdminLoginFilter implements Filter {
     @Override
@@ -26,10 +28,10 @@ public class AdminLoginFilter implements Filter {
         HttpServletResponseWrapper wrapper = new HttpServletResponseWrapper((HttpServletResponse) servletResponse);
         System.out.println(req.getRequestURI());
         //登录则放行
-        if ((req.getRequestURI().indexOf("/login") != -1 || session.getAttribute("admin") != null || req.getRequestURI().indexOf("/adminlogin") != -1) || (req.getRequestURI().indexOf("/img/") != -1)) {
+        if ((req.getRequestURI().contains("login") || session.getAttribute("admin") != null || req.getRequestURI().contains("/adminLogin")) || (req.getRequestURI().contains("/img/"))) {
             filterChain.doFilter(servletRequest, servletResponse);
         } else {
-            wrapper.sendRedirect("/admin/login");
+            wrapper.sendRedirect("/Admin/login");
         }
 
     }
