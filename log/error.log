@@ -138,7 +138,7 @@ org.springframework.expression.spel.SpelEvaluationException: EL1012E: Cannot ind
 
 The last packet successfully received from the server was 5,567 milliseconds ago. The last packet sent successfully to the server was 5,567 milliseconds ago.
 ### The error may exist in stu/xuronghao/ledger/mapper/AdminDao.java (best guess)
-### The error may involve stu.xuronghao.ledger.mapper.AdminDao.insertAnnounce-Inline
+### The error may involve stu.xuronghao.ledger.mapper.AdminMapper.insertAnnounce-Inline
 ### The error occurred while setting parameters
 ### SQL: insert into Announce_T values(?,?,?,?,?,?)
 ### Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
@@ -247,7 +247,7 @@ java.net.SocketException: Connection reset
 00:44:29.221 [http-nio-8090-exec-1] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30000ms.
 ### The error may exist in stu/xuronghao/ledger/mapper/AdminDao.java (best guess)
-### The error may involve stu.xuronghao.ledger.mapper.AdminDao.queryAnnounce
+### The error may involve stu.xuronghao.ledger.mapper.AdminMapper.queryAnnounce
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30000ms.] with root cause
 java.net.ConnectException: Connection refused: connect
