@@ -53,19 +53,17 @@ public class UserServiceImp implements UserService {
     @Override
     public User UserLogin(User user) {
         //从数据库中拉取数据
-        User tmp = mapper.queryByUserNo(user.getUserNo());
+        User res = mapper.queryByUserNo(user.getUserNo());
 
         //用户存在
-        if (tmp != null) {
+        if (res != null) {
             //用户密码正确
-            if (user.getUserPasswd().equals(tmp.getUserPasswd())) {
-                if (ConstantVariable.ACTIVE == tmp.getUserStatus()) {
+            if (user.getUserPasswd().equals(res.getUserPasswd())) {
+                if (ConstantVariable.ACTIVE == res.getUserStatus()) {
                     //改变登录状态
-                    user.setUserStatus(ConstantVariable.LOGGED_IN);
-                    //获取用户数据
-                    user.setUserName(tmp.getUserName());
-                    user.setUserCredits(tmp.getUserCredits());
-                } else if (ConstantVariable.FROZEN_USER == tmp.getUserStatus()) {
+                    res.setUserStatus(ConstantVariable.LOGGED_IN);
+                    return res;
+                } else if (ConstantVariable.FROZEN_USER == res.getUserStatus()) {
                     //用户被冻结
                     user.setUserPasswd(null);
                     user.setUserStatus(ConstantVariable.FROZEN_USER);

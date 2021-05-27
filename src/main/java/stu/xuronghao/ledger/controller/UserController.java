@@ -57,7 +57,7 @@ public class UserController {
     @PostMapping(value = "/Login", produces = ConstantVariable.REQUEST_PRODUCE)
     public String userLogin(@RequestBody String userJson) {
         User user = JSON.parseObject(userJson,User.class);
-        userService.UserLogin(user);
+        user = userService.UserLogin(user);
         log.info(StringUtils.format(ConstantVariable.LOG_CURRENT_USER, user.toString()));
         return JSON.toJSONString(user, SerializerFeature.WriteClassName);
     }
