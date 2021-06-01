@@ -1,11 +1,13 @@
 package stu.xuronghao.ledger.mapper;
 
 
+import org.apache.ibatis.annotations.Mapper;
 import stu.xuronghao.ledger.entity.Anno;
 
 import java.util.List;
 import java.util.Date;
 
+@Mapper
 public interface AnnoMapper {
 
     //按公告编号查询

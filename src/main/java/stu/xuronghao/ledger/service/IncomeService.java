@@ -1,10 +1,12 @@
 package stu.xuronghao.ledger.service;
 
+import org.springframework.stereotype.Service;
 import stu.xuronghao.ledger.entity.ChatInfo;
 import stu.xuronghao.ledger.entity.Income;
 
 import java.util.List;
 
+@Service
 public interface IncomeService {
     Income queryByIncNo(String incomeNo);
 

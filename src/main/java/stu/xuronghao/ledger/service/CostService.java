@@ -1,11 +1,13 @@
 package stu.xuronghao.ledger.service;
 
+import org.springframework.stereotype.Service;
 import stu.xuronghao.ledger.entity.ChatInfo;
 import stu.xuronghao.ledger.entity.Cost;
 import stu.xuronghao.ledger.utils.DateTimeHandler;
 
 import java.util.List;
 
+@Service
 public interface CostService {
 
     Cost queryByCostNo(String costNo);

@@ -51,7 +51,7 @@ public class UserServiceImp implements UserService {
 
     //登录
     @Override
-    public User UserLogin(User user) {
+    public User userLogin(User user) {
         //从数据库中拉取数据
         User res = mapper.queryByUserNo(user.getUserNo());
 

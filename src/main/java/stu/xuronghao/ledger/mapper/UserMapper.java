@@ -1,9 +1,11 @@
 package stu.xuronghao.ledger.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import stu.xuronghao.ledger.entity.User;
 
 import java.util.List;
 
+@Mapper
 public interface UserMapper {
     //按用户编号查询
     User queryByUserNo(String userNo);

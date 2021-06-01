@@ -1,9 +1,11 @@
 package stu.xuronghao.ledger.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import stu.xuronghao.ledger.entity.Cost;
 
 import java.util.List;
 
+@Mapper
 public interface CostMapper {
     Cost queryByCostNo(String costNo);
 

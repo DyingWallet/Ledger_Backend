@@ -1,10 +1,12 @@
 package stu.xuronghao.ledger.service;
 
+import org.springframework.stereotype.Service;
 import stu.xuronghao.ledger.entity.Feedback;
 
 import java.util.Date;
 import java.util.List;
 
+@Service
 public interface FeedbackService {
 
     //精确查找

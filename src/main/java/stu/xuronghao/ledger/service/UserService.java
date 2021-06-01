@@ -1,9 +1,11 @@
 package stu.xuronghao.ledger.service;
 
+import org.springframework.stereotype.Service;
 import stu.xuronghao.ledger.entity.User;
 
 import java.util.List;
 
+@Service
 public interface UserService {
     //精确查找
     User queryByUserNo(String userNo);
@@ -21,7 +23,7 @@ public interface UserService {
     boolean deleteUser(String userNo);
 
     //登录
-    User UserLogin(User user);
+    User userLogin(User user);
 
     //新增用户
     boolean insertUser(User user);
