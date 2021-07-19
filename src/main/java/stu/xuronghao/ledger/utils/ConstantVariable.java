@@ -16,6 +16,7 @@ public class ConstantVariable {
     public static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
     public static final String TIME_ZONE = "GMT+8:00";
     public static final String REQUEST_PRODUCE = "application/json;charset=UTF-8";
+    public static final String TEST = "test";
 
     //日志
     public static final String DEFAULT_CONTENT = "欢迎使用治账！快记点什么吧！";
