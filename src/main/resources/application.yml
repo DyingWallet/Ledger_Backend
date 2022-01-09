@@ -1,7 +1,10 @@
 server:
   port: 8090
 
-####configDBConnection
+#### configDBConnection
+#### This Project is based on MySQL version 8.0.22
+#### If you are using MySQL that below than this version
+#### please change the table name in all the mappers to lowercase
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
